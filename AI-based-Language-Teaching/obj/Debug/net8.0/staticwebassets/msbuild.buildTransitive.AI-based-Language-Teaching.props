@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\AI-based-Language-Teaching.props" />
+</Project>
