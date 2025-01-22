@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/z6qVFIemTQ=",
+  "dgSpecHash": "Ke5rtLT5yq4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tarek\\source\\repos\\AI-based-Language-Teaching\\AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj",
+  "projectFilePath": "C:\\Users\\Tarek\\Source\\Repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tarek\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Tarek\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

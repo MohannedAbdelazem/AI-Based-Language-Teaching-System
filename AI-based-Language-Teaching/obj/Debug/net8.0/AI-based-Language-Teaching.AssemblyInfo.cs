@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AI-based-Language-Teaching")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a83e99dcba5c5ad419337520eb17d09b0e02559")]
 [assembly: System.Reflection.AssemblyProductAttribute("AI-based-Language-Teaching")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AI-based-Language-Teaching")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

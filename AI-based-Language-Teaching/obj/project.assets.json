@@ -8330,11 +8330,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tarek\\source\\repos\\AI-based-Language-Teaching\\AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj",
+      "projectUniqueName": "C:\\Users\\Tarek\\Source\\Repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj",
       "projectName": "AI-based-Language-Teaching",
-      "projectPath": "C:\\Users\\Tarek\\source\\repos\\AI-based-Language-Teaching\\AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj",
+      "projectPath": "C:\\Users\\Tarek\\Source\\Repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj",
       "packagesPath": "C:\\Users\\Tarek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tarek\\source\\repos\\AI-based-Language-Teaching\\AI-based-Language-Teaching\\obj\\",
+      "outputPath": "C:\\Users\\Tarek\\Source\\Repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
