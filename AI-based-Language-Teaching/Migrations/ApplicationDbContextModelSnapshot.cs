@@ -97,35 +97,6 @@ namespace AI_based_Language_Teaching.Migrations
                     b.ToTable("Lessons");
                 });
 
-            modelBuilder.Entity("AI_based_Language_Teaching.Models.PracticeSession", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime?>("EndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("PracticeSessions");
-                });
-
             modelBuilder.Entity("AI_based_Language_Teaching.Models.Progress", b =>
                 {
                     b.Property<int>("Id")
@@ -332,12 +303,10 @@ namespace AI_based_Language_Teaching.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -374,12 +343,10 @@ namespace AI_based_Language_Teaching.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -416,17 +383,6 @@ namespace AI_based_Language_Teaching.Migrations
                         .IsRequired();
 
                     b.Navigation("Curriculum");
-                });
-
-            modelBuilder.Entity("AI_based_Language_Teaching.Models.PracticeSession", b =>
-                {
-                    b.HasOne("AI_based_Language_Teaching.Models.ApplicationUser", "User")
-                        .WithMany("PracticeSessions")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("AI_based_Language_Teaching.Models.Progress", b =>
@@ -511,8 +467,6 @@ namespace AI_based_Language_Teaching.Migrations
 
             modelBuilder.Entity("AI_based_Language_Teaching.Models.ApplicationUser", b =>
                 {
-                    b.Navigation("PracticeSessions");
-
                     b.Navigation("Progresses");
                 });
 #pragma warning restore 612, 618

@@ -1,0 +1,8 @@
+﻿@model AI_based_Language_Teaching.Models.Progress
+
+<h2>Delete Progress</h2>
+<p>Are you sure you want to delete the progress for user: <strong>@Model.UserId</strong>?</p>
+<form asp-action="DeleteConfirmed" asp-route-id="@Model.Id" method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+</form>

@@ -12,16 +12,16 @@ namespace AI_based_Language_Teaching.Service
             _context = context;
         }
 
-        public async Task<Progress> GetProgressByUserIdAsync(string userId)
+        public  Progress GetProgressByUserId(string userId)
         {
-            return await _context.Progresses.FirstOrDefaultAsync(p => p.UserId == userId);
+            return  _context.Progresses.FirstOrDefault(p => p.UserId == userId);
         }
 
-        public async Task UpdateProgressAsync(Progress progress)
+        public void UpdateProgress(Progress progress)
         {
             _context.Progresses.Update(progress);
-            await _context.SaveChangesAsync();
+             _context.SaveChangesAsync();
         }
     }
 
-    }
+}

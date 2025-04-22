@@ -1,23 +1,35 @@
 using AI_based_Language_Teaching;
 using AI_based_Language_Teaching.Models;
+using AI_based_Language_Teaching.Repositories;
+using AI_based_Language_Teaching.Service;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services
+// Add services to the container
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>();
-
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+// Correct configuration for Identity
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+    options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
+builder.Services.AddScoped<IQuestionService, QuestionService>();
+builder.Services.AddScoped<IProgressService, ProgressService>();
+builder.Services.AddScoped<IAnswerService, AnswerService>();
+builder.Services.AddScoped<ILessonService, LessonService>();
+builder.Services.AddScoped<ICurriculumService, CurriculumService>();
+
+// Register repository as generic
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
@@ -32,14 +44,13 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-app.UseAuthentication();
+app.UseAuthentication();  // Use the default authentication provided by Identity
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-// Map Identity endpoints
 app.MapRazorPages();
 
 app.Run();

@@ -5,7 +5,7 @@ namespace AI_based_Language_Teaching.Service
 {
     public interface IProgressService
     {
-        Task<Progress> GetProgressByUserIdAsync(string userId);
-        Task UpdateProgressAsync(Progress progress);
+        Progress GetProgressByUserId(string userId);
+        void UpdateProgress(Progress progress);
     }
 }

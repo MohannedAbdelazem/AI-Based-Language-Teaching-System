@@ -3,33 +3,53 @@
   "WorkspaceRootPath": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Migrations\\20250122103819_InitialMigration2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AI-based-Language-Teaching\\Migrations\\20250122103819_InitialMigration2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|c:\\users\\tarek\\source\\repos\\ai-based-language-teaching-system\\ai-based-language-teaching\\controllers\\progresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\controllers\\progresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|c:\\users\\tarek\\source\\repos\\ai-based-language-teaching-system\\ai-based-language-teaching\\models\\identityuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\models\\identityuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|c:\\users\\tarek\\source\\repos\\ai-based-language-teaching-system\\ai-based-language-teaching\\controllers\\answercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\controllers\\answercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|c:\\users\\tarek\\source\\repos\\ai-based-language-teaching-system\\ai-based-language-teaching\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|c:\\users\\tarek\\source\\repos\\ai-based-language-teaching-system\\ai-based-language-teaching\\views\\progress\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\views\\progress\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|c:\\users\\tarek\\source\\repos\\ai-based-language-teaching-system\\ai-based-language-teaching\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|c:\\users\\tarek\\source\\repos\\ai-based-language-teaching-system\\ai-based-language-teaching\\views\\progress\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\views\\progress\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|c:\\users\\tarek\\source\\repos\\ai-based-language-teaching-system\\ai-based-language-teaching\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|c:\\users\\tarek\\source\\repos\\ai-based-language-teaching-system\\ai-based-language-teaching\\views\\progress\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\views\\progress\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|c:\\users\\tarek\\source\\repos\\ai-based-language-teaching-system\\ai-based-language-teaching\\views\\progress\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\views\\progress\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|c:\\users\\tarek\\source\\repos\\ai-based-language-teaching-system\\ai-based-language-teaching\\views\\lesson\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\views\\lesson\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|c:\\users\\tarek\\source\\repos\\ai-based-language-teaching-system\\ai-based-language-teaching\\views\\lesson\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\views\\lesson\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|c:\\users\\tarek\\source\\repos\\ai-based-language-teaching-system\\ai-based-language-teaching\\views\\lesson\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\views\\lesson\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|c:\\users\\tarek\\source\\repos\\ai-based-language-teaching-system\\ai-based-language-teaching\\views\\lesson\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\views\\lesson\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 83,
+          "DockedWidth": 286,
           "SelectedChildIndex": 3,
           "Children": [
             {
@@ -47,72 +67,137 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20250122103819_InitialMigration2.cs",
-              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Migrations\\20250122103819_InitialMigration2.cs",
-              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Migrations\\20250122103819_InitialMigration2.cs",
-              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Migrations\\20250122103819_InitialMigration2.cs",
-              "RelativeToolTip": "AI-based-Language-Teaching\\Migrations\\20250122103819_InitialMigration2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ProgressController.cs",
+              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Controllers\\ProgressController.cs",
+              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Controllers\\ProgressController.cs",
+              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Controllers\\ProgressController.cs*",
+              "RelativeToolTip": "AI-based-Language-Teaching\\Controllers\\ProgressController.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T10:38:19.975Z",
+              "WhenOpened": "2025-04-22T18:22:16.735Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IdentityUser.cs",
-              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Models\\IdentityUser.cs",
-              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Models\\IdentityUser.cs",
-              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Models\\IdentityUser.cs",
-              "RelativeToolTip": "AI-based-Language-Teaching\\Models\\IdentityUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABRAAAAAAAAAA==",
+              "Title": "AnswerController.cs",
+              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Controllers\\AnswerController.cs",
+              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Controllers\\AnswerController.cs",
+              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Controllers\\AnswerController.cs",
+              "RelativeToolTip": "AI-based-Language-Teaching\\Controllers\\AnswerController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAmwE8AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T10:35:25.536Z",
+              "WhenOpened": "2025-04-22T18:21:49.704Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\ApplicationDbContext.cs",
-              "RelativeToolTip": "AI-based-Language-Teaching\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T10:31:01.578Z",
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Progress\\Delete.cshtml",
+              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Views\\Progress\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Progress\\Delete.cshtml",
+              "RelativeToolTip": "AI-based-Language-Teaching\\Views\\Progress\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-22T18:21:25.528Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "AI-based-Language-Teaching\\Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T10:21:02.243Z",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Progress\\Edit.cshtml",
+              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Views\\Progress\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Progress\\Edit.cshtml",
+              "RelativeToolTip": "AI-based-Language-Teaching\\Views\\Progress\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-22T18:21:19.677Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "AI-based-Language-Teaching\\Controllers\\DashboardController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T10:04:34.857Z",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Progress\\Create.cshtml",
+              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Views\\Progress\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Progress\\Create.cshtml",
+              "RelativeToolTip": "AI-based-Language-Teaching\\Views\\Progress\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-22T18:21:13.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Progress\\Index.cshtml",
+              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Views\\Progress\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Progress\\Index.cshtml",
+              "RelativeToolTip": "AI-based-Language-Teaching\\Views\\Progress\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-22T18:21:07.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Lesson\\Delete.cshtml",
+              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Views\\Lesson\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Lesson\\Delete.cshtml",
+              "RelativeToolTip": "AI-based-Language-Teaching\\Views\\Lesson\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-22T18:20:58.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Lesson\\Edit.cshtml",
+              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Views\\Lesson\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Lesson\\Edit.cshtml",
+              "RelativeToolTip": "AI-based-Language-Teaching\\Views\\Lesson\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-22T18:20:52.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Lesson\\Create.cshtml",
+              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Views\\Lesson\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Lesson\\Create.cshtml",
+              "RelativeToolTip": "AI-based-Language-Teaching\\Views\\Lesson\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-22T18:20:44.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Lesson\\Index.cshtml",
+              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Views\\Lesson\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Tarek\\source\\repos\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Views\\Lesson\\Index.cshtml",
+              "RelativeToolTip": "AI-based-Language-Teaching\\Views\\Lesson\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-22T18:20:28.994Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedHeight": 200,
+          "DockedWidth": 1529,
           "SelectedChildIndex": -1,
           "Children": [
             {

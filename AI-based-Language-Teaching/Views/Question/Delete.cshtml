@@ -1,0 +1,8 @@
+﻿@model AI_based_Language_Teaching.Models.Question
+
+<h2>Delete Question</h2>
+<p>Are you sure you want to delete the question: <strong>@Model.Text</strong>?</p>
+<form asp-action="DeleteConfirmed" asp-route-id="@Model.Id" method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+</form>

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AI_based_Language_Teaching.Models.Curriculum>
+
+<h2>All Curricula</h2>
+<a asp-action="Create" class="btn btn-primary">Create New</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Language Level</th>
+            <th>Description</th>
+            <th>Number of Lessons</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.LanguageLevel</td>
+                <td>@item.Description</td>
+                <td>@item.Lessons.Count</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -14,9 +14,9 @@ namespace AI_based_Language_Teaching.Controllers
             _progressService = progressService;
         }
 
-        public async Task<IActionResult> Details(string userId)
+        public  IActionResult Details(string userId)
         {
-            var progress = await _progressService.GetProgressByUserIdAsync(userId);
+            var progress =  _progressService.GetProgressByUserId(userId);
             if (progress == null)
             {
                 return NotFound();
@@ -31,11 +31,11 @@ namespace AI_based_Language_Teaching.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Progress progress)
+        public IActionResult Edit(Progress progress)
         {
             if (ModelState.IsValid)
             {
-                await _progressService.UpdateProgressAsync(progress);
+                 _progressService.UpdateProgress(progress);
                 return RedirectToAction("Details", new { userId = progress.UserId });
             }
             return View(progress);

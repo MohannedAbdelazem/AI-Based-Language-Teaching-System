@@ -1,0 +1,32 @@
+﻿@model IEnumerable<AI_based_Language_Teaching.Models.Answer>
+
+<h2>All Answers</h2>
+<a asp-action="Create" class="btn btn-primary">Create New</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Question ID</th>
+            <th>User Answer</th>
+            <th>Is Correct</th>
+            <th>Answered At</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.QuestionId</td>
+                <td>@item.UserAnswer</td>
+                <td>@item.IsCorrect</td>
+                <td>@item.AnsweredAt</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

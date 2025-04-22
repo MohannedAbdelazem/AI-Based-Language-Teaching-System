@@ -12,35 +12,35 @@ namespace AI_based_Language_Teaching.Service
             _context = context;
         }
 
-        public async Task<IEnumerable<Answer>> GetAnswersAsync()
+        public  IEnumerable<Answer> GetAnswers()
         {
-            return await _context.Answers.ToListAsync();
+            return  _context.Answers.ToList();
         }
 
-        public async Task<Answer> GetAnswerByIdAsync(int id)
+        public Answer GetAnswerById(int id)
         {
-            return await _context.Answers.FindAsync(id);
+            return  _context.Answers.Find(id);
         }
 
-        public async Task CreateAnswerAsync(Answer answer)
+        public void CreateAnswer(Answer answer)
         {
             _context.Answers.Add(answer);
-            await _context.SaveChangesAsync();
+             _context.SaveChanges();
         }
 
-        public async Task UpdateAnswerAsync(Answer answer)
+        public void UpdateAnswer(Answer answer)
         {
             _context.Answers.Update(answer);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
-        public async Task DeleteAnswerAsync(int id)
+        public void DeleteAnswer(int id)
         {
-            var answer = await _context.Answers.FindAsync(id);
+            var answer =  _context.Answers.Find(id);
             if (answer != null)
             {
                 _context.Answers.Remove(answer);
-                await _context.SaveChangesAsync();
+                 _context.SaveChangesAsync();
             }
         }
     }

@@ -13,9 +13,9 @@ namespace AI_based_Language_Teaching.Controllers
             _answerService = answerService;
         }
 
-        public async Task<IActionResult> Index()
+        public  IActionResult Index()
         {
-            var answers = await _answerService.GetAnswersAsync();
+            var answers =  _answerService.GetAnswers();
             return View(answers);
         }
 
@@ -26,19 +26,19 @@ namespace AI_based_Language_Teaching.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Answer answer)
+        public  IActionResult Create(Answer answer)
         {
             if (ModelState.IsValid)
             {
-                await _answerService.CreateAnswerAsync(answer);
+                 _answerService.CreateAnswer(answer);
                 return RedirectToAction(nameof(Index));
             }
             return View(answer);
         }
 
-        public async Task<IActionResult> Edit(int id)
+        public  IActionResult Edit(int id)
         {
-            var answer = await _answerService.GetAnswerByIdAsync(id);
+            var answer =  _answerService.GetAnswerById(id);
             if (answer == null)
             {
                 return NotFound();
@@ -48,7 +48,7 @@ namespace AI_based_Language_Teaching.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Answer answer)
+        public  IActionResult Edit(int id, Answer answer)
         {
             if (id != answer.Id)
             {
@@ -57,15 +57,15 @@ namespace AI_based_Language_Teaching.Controllers
 
             if (ModelState.IsValid)
             {
-                await _answerService.UpdateAnswerAsync(answer);
+                 _answerService.UpdateAnswer(answer);
                 return RedirectToAction(nameof(Index));
             }
             return View(answer);
         }
 
-        public async Task<IActionResult> Delete(int id)
+        public  IActionResult Delete(int id)
         {
-            var answer = await _answerService.GetAnswerByIdAsync(id);
+            var answer =  _answerService.GetAnswerById(id);
             if (answer == null)
             {
                 return NotFound();
@@ -75,9 +75,9 @@ namespace AI_based_Language_Teaching.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public  IActionResult DeleteConfirmed(int id)
         {
-            await _answerService.DeleteAnswerAsync(id);
+             _answerService.DeleteAnswer(id);
             return RedirectToAction(nameof(Index));
         }
     }

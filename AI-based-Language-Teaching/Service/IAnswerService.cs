@@ -4,10 +4,10 @@ namespace AI_based_Language_Teaching.Service
 {
     public interface IAnswerService
     {
-        Task<IEnumerable<Answer>> GetAnswersAsync();
-        Task<Answer> GetAnswerByIdAsync(int id);
-        Task CreateAnswerAsync(Answer answer);
-        Task UpdateAnswerAsync(Answer answer);
-        Task DeleteAnswerAsync(int id);
+        IEnumerable<Answer> GetAnswers();
+       Answer GetAnswerById(int id);
+        void CreateAnswer(Answer answer);
+        void UpdateAnswer(Answer answer);
+        void DeleteAnswer(int id);
     }
 }
