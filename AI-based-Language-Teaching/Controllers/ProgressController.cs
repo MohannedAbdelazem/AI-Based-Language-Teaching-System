@@ -1,11 +1,12 @@
 ﻿using AI_based_Language_Teaching.Models;
 using AI_based_Language_Teaching.Service;
 using Microsoft.AspNetCore.Mvc;
-using System;
 
 namespace AI_based_Language_Teaching.Controllers
 {
-    public class ProgressController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ProgressController : ControllerBase
     {
         private readonly IProgressService _progressService;
 
@@ -14,31 +15,27 @@ namespace AI_based_Language_Teaching.Controllers
             _progressService = progressService;
         }
 
-        public  IActionResult Details(string userId)
+        [HttpGet("{userId}")]
+        public IActionResult Get(string userId)
         {
-            var progress =  _progressService.GetProgressByUserId(userId);
+            var progress = _progressService.GetProgressByUserId(userId);
             if (progress == null)
-            {
                 return NotFound();
-            }
-            return View(progress);
+
+            return Ok(progress);
         }
 
-        public IActionResult Edit(string userId)
+        [HttpPut("{userId}")]
+        public IActionResult Update(string userId, [FromBody] Progress progress)
         {
-            return View();
-        }
+            if (userId != progress.UserId)
+                return BadRequest();
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(Progress progress)
-        {
-            if (ModelState.IsValid)
-            {
-                 _progressService.UpdateProgress(progress);
-                return RedirectToAction("Details", new { userId = progress.UserId });
-            }
-            return View(progress);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            _progressService.UpdateProgress(progress);
+            return NoContent();
         }
     }
 }

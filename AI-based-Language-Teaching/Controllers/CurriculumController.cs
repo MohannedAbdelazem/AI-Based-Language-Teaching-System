@@ -1,9 +1,12 @@
 ﻿using AI_based_Language_Teaching.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AI_based_Language_Teaching.Controllers
 {
-    public class CurriculumController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class CurriculumController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
@@ -12,90 +15,57 @@ namespace AI_based_Language_Teaching.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
         {
-            var curricula = _context.Curricula.ToList();
-            return View(curricula);
+            var curricula = await _context.Curricula.ToListAsync();
+            return Ok(curricula);
         }
 
-        public IActionResult Details(int id)
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
         {
-            var curriculum = _context.Curricula.FirstOrDefault(c => c.Id == id);
+            var curriculum = await _context.Curricula.FirstOrDefaultAsync(c => c.Id == id);
             if (curriculum == null)
-            {
                 return NotFound();
-            }
-            return View(curriculum);
-        }
-
-        public IActionResult Create()
-        {
-            return View();
+            return Ok(curriculum);
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(Curriculum curriculum)
+        public async Task<IActionResult> Create([FromBody] Curriculum curriculum)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Curricula.Add(curriculum);
-                _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(curriculum);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            _context.Curricula.Add(curriculum);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(Get), new { id = curriculum.Id }, curriculum);
         }
 
-        public IActionResult Edit(int id)
-        {
-            var curriculum = _context.Curricula.FirstOrDefault(c => c.Id == id);
-            if (curriculum == null)
-            {
-                return NotFound();
-            }
-            return View(curriculum);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, Curriculum curriculum)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromBody] Curriculum curriculum)
         {
             if (id != curriculum.Id)
-            {
-                return NotFound();
-            }
+                return BadRequest();
 
-            if (ModelState.IsValid)
-            {
-                _context.Curricula.Update(curriculum);
-                _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(curriculum);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            _context.Curricula.Update(curriculum);
+            await _context.SaveChangesAsync();
+            return NoContent();
         }
 
-        public IActionResult Delete(int id)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
         {
-            var curriculum = _context.Curricula.FirstOrDefault(c => c.Id == id);
+            var curriculum = await _context.Curricula.FirstOrDefaultAsync(c => c.Id == id);
             if (curriculum == null)
-            {
                 return NotFound();
-            }
-            return View(curriculum);
-        }
 
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            var curriculum = _context.Curricula.FirstOrDefault(c => c.Id == id);
-            if (curriculum != null)
-            {
-                _context.Curricula.Remove(curriculum);
-                _context.SaveChanges();
-            }
-            return RedirectToAction(nameof(Index));
+            _context.Curricula.Remove(curriculum);
+            await _context.SaveChangesAsync();
+            return NoContent();
         }
-
-}
+    }
 }

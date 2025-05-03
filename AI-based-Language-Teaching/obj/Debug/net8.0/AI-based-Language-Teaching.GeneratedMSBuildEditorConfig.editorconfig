@@ -186,92 +186,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Answer/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zd2VyXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Answer/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zd2VyXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Answer/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zd2VyXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Answer/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zd2VyXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Curriculum/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmljdWx1bVxDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Curriculum/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmljdWx1bVxEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Curriculum/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmljdWx1bVxFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Curriculum/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmljdWx1bVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Lesson/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Lesson/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Lesson/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Lesson/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Progress/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3Jlc3NcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Progress/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3Jlc3NcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Progress/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3Jlc3NcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Progress/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3Jlc3NcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Question/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25cQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Question/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25cRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Question/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25cRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Question/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Tarek/Source/Repos/AI-Based-Language-Teaching-System/AI-based-Language-Teaching/Views/Shared/Error.cshtml]

@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AI_based_Language_Teaching.Controllers
 {
-    public class AnswerController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class AnswerController : ControllerBase
     {
         private readonly IAnswerService _answerService;
 
@@ -13,72 +15,54 @@ namespace AI_based_Language_Teaching.Controllers
             _answerService = answerService;
         }
 
-        public  IActionResult Index()
+        [HttpGet]
+        public IActionResult GetAll()
         {
-            var answers =  _answerService.GetAnswers();
-            return View(answers);
+            var answers = _answerService.GetAnswers();
+            return Ok(answers);
         }
 
-        public IActionResult Create()
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
         {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public  IActionResult Create(Answer answer)
-        {
-            if (ModelState.IsValid)
-            {
-                 _answerService.CreateAnswer(answer);
-                return RedirectToAction(nameof(Index));
-            }
-            return View(answer);
-        }
-
-        public  IActionResult Edit(int id)
-        {
-            var answer =  _answerService.GetAnswerById(id);
+            var answer = _answerService.GetAnswerById(id);
             if (answer == null)
-            {
                 return NotFound();
-            }
-            return View(answer);
+            return Ok(answer);
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public  IActionResult Edit(int id, Answer answer)
+        public IActionResult Create([FromBody] Answer answer)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            _answerService.CreateAnswer(answer);
+            return CreatedAtAction(nameof(Get), new { id = answer.Id }, answer);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, [FromBody] Answer answer)
         {
             if (id != answer.Id)
-            {
-                return NotFound();
-            }
+                return BadRequest();
 
-            if (ModelState.IsValid)
-            {
-                 _answerService.UpdateAnswer(answer);
-                return RedirectToAction(nameof(Index));
-            }
-            return View(answer);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            _answerService.UpdateAnswer(answer);
+            return NoContent();
         }
 
-        public  IActionResult Delete(int id)
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
         {
-            var answer =  _answerService.GetAnswerById(id);
+            var answer = _answerService.GetAnswerById(id);
             if (answer == null)
-            {
                 return NotFound();
-            }
-            return View(answer);
-        }
 
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public  IActionResult DeleteConfirmed(int id)
-        {
-             _answerService.DeleteAnswer(id);
-            return RedirectToAction(nameof(Index));
+            _answerService.DeleteAnswer(id);
+            return NoContent();
         }
     }
 }

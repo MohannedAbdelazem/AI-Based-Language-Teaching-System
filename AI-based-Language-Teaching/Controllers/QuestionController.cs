@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AI_based_Language_Teaching.Controllers
 {
-    public class QuestionController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class QuestionController : ControllerBase
     {
         private readonly IQuestionService _questionService;
 
@@ -13,72 +15,55 @@ namespace AI_based_Language_Teaching.Controllers
             _questionService = questionService;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult GetAll()
         {
-            var questions = _questionService.GetQuestions(); 
-            return View(questions);
+            var questions = _questionService.GetQuestions();
+            return Ok(questions);
         }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(Question question)
-        {
-            if (ModelState.IsValid)
-            {
-                _questionService.CreateQuestion(question); 
-                return RedirectToAction(nameof(Index));
-            }
-            return View(question);
-        }
-
-        public IActionResult Edit(int id)
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
         {
             var question = _questionService.GetQuestionById(id);
             if (question == null)
-            {
                 return NotFound();
-            }
-            return View(question);
+
+            return Ok(question);
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, Question question)
+        public IActionResult Create([FromBody] Question question)
         {
-            if (id != question.Id)
-            {
-                return NotFound();
-            }
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            if (ModelState.IsValid)
-            {
-                _questionService.UpdateQuestion(question);
-                return RedirectToAction(nameof(Index));
-            }
-            return View(question);
+            _questionService.CreateQuestion(question);
+            return CreatedAtAction(nameof(Get), new { id = question.Id }, question);
         }
 
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, [FromBody] Question question)
+        {
+            if (id != question.Id)
+                return BadRequest();
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            _questionService.UpdateQuestion(question);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             var question = _questionService.GetQuestionById(id);
             if (question == null)
-            {
                 return NotFound();
-            }
-            return View(question);
-        }
 
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            _questionService.DeleteQuestion(id); 
-            return RedirectToAction(nameof(Index));
+            _questionService.DeleteQuestion(id);
+            return NoContent();
         }
     }
 }

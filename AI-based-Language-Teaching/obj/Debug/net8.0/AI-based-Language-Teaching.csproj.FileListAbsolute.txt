@@ -583,3 +583,7 @@ C:\Users\Tarek\Source\Repos\AI-Based-Language-Teaching-System\AI-based-Language-
 C:\Users\Tarek\Source\Repos\AI-Based-Language-Teaching-System\AI-based-Language-Teaching\obj\Debug\net8.0\AI-based-Language-Teaching.pdb
 C:\Users\Tarek\Source\Repos\AI-Based-Language-Teaching-System\AI-based-Language-Teaching\obj\Debug\net8.0\AI-based-Language-Teaching.genruntimeconfig.cache
 C:\Users\Tarek\Source\Repos\AI-Based-Language-Teaching-System\AI-based-Language-Teaching\obj\Debug\net8.0\ref\AI-based-Language-Teaching.dll
+C:\Users\Tarek\Source\Repos\AI-Based-Language-Teaching-System\AI-based-Language-Teaching\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Tarek\Source\Repos\AI-Based-Language-Teaching-System\AI-based-Language-Teaching\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Tarek\Source\Repos\AI-Based-Language-Teaching-System\AI-based-Language-Teaching\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Tarek\Source\Repos\AI-Based-Language-Teaching-System\AI-based-Language-Teaching\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
