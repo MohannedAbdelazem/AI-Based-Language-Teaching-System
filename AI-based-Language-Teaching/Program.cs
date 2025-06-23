@@ -36,6 +36,7 @@ builder.Services.AddSingleton<IEmailSender, DummyEmailSender>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddRazorPages();
 
 // Angular (for youssef this next part is to call the API, we need to enable CORS)
 builder.Services.AddCors(options =>
@@ -65,7 +66,7 @@ app.UseAuthorization();
 
 app.UseSwagger();
 app.UseSwaggerUI();
-
+app.MapRazorPages();
 app.MapControllers();
 
 app.Run();
