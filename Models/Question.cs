@@ -8,7 +8,7 @@
         public string CorrectAnswer { get; set; }
         public string source_type{ get; set; }
         public int source_index{ get; set; }
-        public ICollection<Answer> Answers { get; set; } = new List<Answer>();
+        public ICollection<Dictionary<string, string>> options { get; set; } = new List<Dictionary<string, string>>();
         
     }
 }

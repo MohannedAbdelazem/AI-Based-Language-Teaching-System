@@ -31,7 +31,6 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 // Register services and repository
 builder.Services.AddScoped<IQuestionService, QuestionService>();
 builder.Services.AddScoped<IProgressService, ProgressService>();
-builder.Services.AddScoped<IAnswerService, AnswerService>();
 builder.Services.AddScoped<ILessonService, LessonService>();
 builder.Services.AddScoped<ICurriculumService, CurriculumService>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
@@ -61,7 +60,7 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     var urlProvider = services.GetRequiredService<UrlProvider>();
 
-   string pathToCredentials = Path.Combine(AppContext.BaseDirectory, "gpthing-f922e-firebase-adminsdk-fbsvc-b879591fab.json");
+   string pathToCredentials = Path.Combine(AppContext.BaseDirectory, "gpthing-f922e-firebase-adminsdk-fbsvc-d4c4f4c4ec.json");
 
     var firestoreBuilder = new FirestoreClientBuilder
     {
