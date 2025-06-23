@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="image">
+                <img src="./assets/freepik__the-style-is-candid-image-photography-with-natural__86887.jpeg" alt="login">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="title p-0">
+                <h1 class="text-center">Create an account</h1>
+            </div>
+            <div class="form">
+                <form [formGroup]="registerForm" (ngSubmit)="sendData()">
+                    <div class="mb-f mt-5 d-flex gap-4">
+                        <input type="text" class="form-control" placeholder="First name" id="text" formControlName="firstName" name="text" required>
+                        <input type="text" class="form-control" placeholder="Last name" id="text" formControlName="lastName" name="text" required>
+                    </div>
+                    <div class="mb-f">
+                        <input type="email" class="form-control" placeholder="Email" id="email" formControlName="email" name="email" required>
+                    </div>
+                    <div class="mb-f">
+                        <input type="password" class="form-control" placeholder="Password" id="password" formControlName="password" name="password" required>
+                    </div>
+
+                    <button type="submit" class="btn">Create an account</button>
+                </form>
+            </div>
+            <div class="registration d-flex">
+                <div class="line"></div>
+                <p class="text-center">Or register with</p>
+                <div class="line position-relative"></div>
+            </div>
+            <div class="google d-flex gap-4">
+                <button type="button" class="btn p-0 text-white d-flex align-items-center justify-content-center">
+                    <div class="GoogleImage">
+                        <img src="./assets/Google.png" alt="">
+                    </div>
+                    <p class="fs-5 mt-3">Google</p>
+                </button>
+                <button type="button" class="btn p-0 text-white d-flex align-items-center justify-content-center">
+                    <div class="GoogleImage">
+                        <img src="./assets/Apple.png" alt="">
+                    </div>
+                    <p class="fs-5 mt-3">Apple</p>
+                </button>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>

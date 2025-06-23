@@ -1,0 +1,134 @@
+li
+{
+    font-size: 14px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+}
+p {
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15px;
+    color: #748182;
+}
+
+.start-5
+{
+    margin-top: 10px;
+    left: 5%;
+}
+
+.progress
+{
+
+    height: 15px;
+    border-radius: 10px;
+    background-color: #3b364c;
+}
+.bars
+{
+
+    position: relative;
+    top: 150px;
+    left: 0px;
+    width: 500px;
+    border: #684d9e 5px solid;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.progress-bar
+{
+    background-image: linear-gradient(to right, #b500ff, #ed00fe);
+    border-radius: 10px;
+}
+
+.title
+{
+    font-weight: bold;
+    color: #403061;
+    font-size: 20px;
+}
+.topic
+{
+    font-weight: bold;
+    color: white;
+    font-size: 28px;
+}
+.title-topic
+{
+    background-color: #684d9e;
+    position: relative;
+    top: 35px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.title-topic .col button
+{
+    background-color: #ff50a5;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0px 2px 10px rgb(0, 0, 0, 0.5);
+}
+
+.lessons
+{
+    position: relative;
+    top: 70px;
+    width: 70px;
+    height: 70px;
+    background-color: #dc00fe;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 6px rgb(255, 80, 165, 0.5);
+}
+
+.learning-lessons
+{
+    gap: 65px;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+}
+
+.line-topic
+{
+    position: relative;
+    top: 100px;
+    left: 23px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.line::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background-color: #3c364c;
+    margin-top: 10px;
+    position: relative;
+    top: 100px;
+}
+
+.page
+{
+    position: relative;
+    top: 100px;
+}
+
+.progress-data
+{
+    position: sticky;
+    top: 225px; /* Sticks at the top when scrolling */
+    z-index: 1000;
+}
