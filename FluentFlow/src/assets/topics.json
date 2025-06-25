@@ -1,0 +1,46 @@
+{
+  "topics": [
+    {
+      "topic": "Present Simple",
+      "chaptersNum": 10
+    },
+    {
+      "topic": "Past Simple",
+      "chaptersNum": 8
+    },
+    {
+      "topic": "Present Continuous",
+      "chaptersNum": 7
+    },
+    {
+      "topic": "Future Tense",
+      "chaptersNum": 6
+    },
+    {
+      "topic": "Countable and Uncountable Nouns",
+      "chaptersNum": 5
+    },
+    {
+      "topic": "Modal Verbs",
+      "chaptersNum": 9
+    },
+    {
+      "topic": "Prepositions of Time and Place",
+      "chaptersNum": 4
+    },
+    {
+      "topic": "Adjectives and Adverbs",
+      "chaptersNum": 6
+    },
+    {
+      "topic": "Articles (a, an, the)",
+      "chaptersNum": 3
+    },
+    {
+      "topic": "Basic Sentence Structure",
+      "chaptersNum": 7
+    }
+  ]
+}
+
+

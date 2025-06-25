@@ -60,10 +60,11 @@ p {
 .title-topic
 {
     background-color: #684d9e;
-    position: relative;
-    top: 35px;
+    position: sticky;
+    top: 150px;
     padding: 10px;
     border-radius: 20px;
+    z-index: 30;
 }
 .title-topic .col button
 {
@@ -80,8 +81,7 @@ p {
 
 .lessons
 {
-    position: relative;
-    top: 70px;
+
     width: 70px;
     height: 70px;
     background-color: #dc00fe;
@@ -94,31 +94,15 @@ p {
 
 .learning-lessons
 {
+    position: relative;
+    left: 10px;
     gap: 65px;
     display: grid;
     grid-template-columns: repeat(5, auto);
     justify-content: center;
+
 }
 
-.line-topic
-{
-    position: relative;
-    top: 100px;
-    left: 23px;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.line::after {
-    content: "";
-    display: block;
-    width: 200px;
-    height: 2px;
-    background-color: #3c364c;
-    margin-top: 10px;
-    position: relative;
-    top: 100px;
-}
 
 .page
 {
@@ -131,4 +115,27 @@ p {
     position: sticky;
     top: 225px; /* Sticks at the top when scrolling */
     z-index: 1000;
+}
+
+.line {
+  height: 2px;
+  background-color: #3c364c;
+  width: 100%;
+}
+
+.line-topic {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+
+.hiding
+{
+    //background-color: #2d2638;
+    position: sticky;
+    top: 90px;
+    background-color: #2d2638;
+    width: 630px;
+    height: 90px;
+    z-index: 20;
 }

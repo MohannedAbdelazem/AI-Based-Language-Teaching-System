@@ -9,16 +9,24 @@
             <div class="title p-0">
                 <h1 class="text-center">Log in</h1>
             </div>
-            <div class="form">
+            <div class="form" [formGroup]="loginForm" (ngSubmit)="sendData()">
                 <form method="POST">
                     <div class="mb-f mt-5">
-                        <input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
+                        <input type="email" class="form-control" placeholder="Email" formControlName="email" id="email" name="email" required>
                     </div>
                     <div class="mb-f">
-                        <input type="password" class="form-control" placeholder="Password" id="password" name="password" required>
+                        <input type="password" class="form-control" placeholder="Password" formControlName="password" id="password" name="password" required>
                     </div>
-                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkChecked" formControlName="rememberMe">
+                        <label class="form-check-label text-white" for="checkChecked">
+                            Remember me
+                        </label>
+                    </div>
                     <button type="submit" class="btn">Log in</button>
+                    <div class="create-account d-flex justify-content-center align-items-center">
+                        <a class="d-flex justify-content-center align-items-center " routerLink="/register">Create account ?</a>
+                    </div>
                 </form>
             </div>
             <div class="registration d-flex">
