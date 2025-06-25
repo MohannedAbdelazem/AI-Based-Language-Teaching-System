@@ -6,10 +6,10 @@
             </div>
             <div class="col ">
                 <div class="hiding"></div>
-                <div class="row title-topic mb-5">
+                <div #topicText class="row title-topic mb-5">
                     <div class="col">
-                        <p class="title">Section 1</p>
-                        <p class="topic">Past Simple</p>
+                        <p class="title">Section {{titleNumber}}</p>
+                        <p class="topic">{{title}}</p>
                     </div>
                     <div class="col d-flex justify-content-end align-items-center">
                         <button>Details</button>
@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                             }
-                            <div class="row d-flex justify-content-center align-items-center my-4">
+                            <div #lineElement class="row  d-flex justify-content-center align-items-center my-4">
                                 <div class="col-auto flex-grow-1">
                                     <div class="line"></div>
                                 </div>
@@ -35,7 +35,7 @@
                                     <p class="line-topic m-0 px-3">{{ topic.topic }}</p>
                                 </div>
                                 <div class="col-auto flex-grow-1">
-                                    <div class="line"></div>
+                                    <div  class="line"></div>
                                 </div>
                             </div>
 
