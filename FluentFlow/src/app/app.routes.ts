@@ -6,6 +6,7 @@ import { QuestionsTypesComponent } from './layout/pages/questions-types/question
 import { TestQuestionComponent } from './layout/pages/test-question/test-question.component';
 import { FlagsComponent } from './layout/pages/flags/flags.component';
 import { ListeningQuestionsComponent } from './layout/pages/listening-questions/listening-questions.component';
+import { ReadingQuestionsComponent } from './layout/pages/reading-questions/reading-questions.component';
 
 export const routes: Routes = [
     { path: "", redirectTo: "login", pathMatch: "full" },
@@ -16,4 +17,5 @@ export const routes: Routes = [
     { path: "test-question", component: TestQuestionComponent },
     { path: "flags", component: FlagsComponent },
     { path: "listening-questions", component: ListeningQuestionsComponent },
+    { path: "reading-questions", component: ReadingQuestionsComponent }, 
 ];

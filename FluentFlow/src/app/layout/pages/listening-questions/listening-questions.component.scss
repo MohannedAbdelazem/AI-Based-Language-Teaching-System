@@ -5,7 +5,7 @@
   overflow: hidden;
   position: relative;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #2a2d47;
+  background: #2d2638;
 }
 
 
@@ -28,7 +28,7 @@
 }
 
 .player-bar {
-  background: rgba(68, 75, 105, 0.9);
+  background: rgba(58, 64, 91, 0.9);
   backdrop-filter: blur(20px);
   border-radius: 25px;
   padding: 25px 35px;
@@ -36,7 +36,6 @@
   align-items: center;
   gap: 25px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 40px;
 }
 
@@ -111,10 +110,6 @@ audio {
 }
 
 
-
-
-
-
 .wave 
 {
   position: relative;
@@ -159,19 +154,6 @@ audio {
   margin-right: 30px ;
 }
 
-.question
-{
-  position: relative;
-  top: 35px;
-  
-  
-}
-
-.question h1
-{
-  font-size: 55px;
-  
-}
 
 .buttons
 {
@@ -201,41 +183,4 @@ audio {
   transform: scale(1.05);
   background-color: #ff80c0;
   box-shadow: 0px 2px 15px rgba(255, 80, 165, 0.7);
-}
-
-
-
-.answer
-{
-  cursor: pointer;
-  position: relative;
-  top: 115px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  // width: 50%;
-  background-color: #f27ba5;
-  border-radius: 10px;
-  box-shadow: 0px 2px 15px rgba(255, 80, 165, 0.7);
-  color: white;
-  transition: all 0.3s ease;
-}
-
-.answer:hover
-{
-  transform: scale(1.02);
-  background-color: #b01965;
-  box-shadow: 0px 2px 20px rgba(255, 80, 165, 0.7);
-}
-
-.answerClicked
-{
-  transform: scale(1.05);
-  background-color: #b01965;
-  box-shadow: 0px 2px 20px rgba(255, 80, 165, 0.7);
-}
-
-.box
-{
-  padding-left: 30px;
-  padding-right: 30px;
 }
