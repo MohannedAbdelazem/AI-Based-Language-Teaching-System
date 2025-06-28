@@ -1,10 +1,10 @@
 export interface ReadingData {
-  reading: Reading[];
-}
-
-interface Reading {
   paragraphTitle: string;
   paragraph: string;
+  questions: Question[];
+}
+
+interface Question {
   question: string;
   choices: string[];
   rightAnswer: string;

@@ -14,7 +14,7 @@ export const routes: Routes = [
     { path: "login", component: LoginComponent },
     { path: "register", component: RegisterComponent },
     { path: "questions-types/:id", component: QuestionsTypesComponent },
-    { path: "test-question", component: TestQuestionComponent },
+    { path: "test-question/:id", component: TestQuestionComponent },
     { path: "flags", component: FlagsComponent },
     { path: "listening-questions", component: ListeningQuestionsComponent },
     { path: "reading-questions", component: ReadingQuestionsComponent }, 

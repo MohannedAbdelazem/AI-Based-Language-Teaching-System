@@ -1,7 +1,10 @@
 <div class="Logo">
     <img src="./assets/Logo.png" alt="">
     <div class="question-title text-white">
-        <h1 class=" ms-4 ">Reading : The Park </h1>
+        @if (questions[pragraphNumber]) 
+        {
+            <h1 class=" ms-4 ">Reading : {{questions[pragraphNumber].paragraphTitle}} </h1>
+        }
     </div>
 </div>
 
@@ -13,14 +16,11 @@
     </svg>
 </div>
 
-<div class="container text-white d-flex justify-content-center align-items-center">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur cum excepturi quasi distinctio alias
-        impedit, voluptates ea odio fugiat aperiam esse quaerat asperiores eaque necessitatibus quidem illo ipsa fugit
-        tenetur atque. Ipsa, autem. Adipisci sunt est maxime reiciendis, dolorem tempora facere illum eaque commodi
-        molestias facilis quae neque ducimus, nisi accusantium molestiae totam sed minima nihil quos ex. Dolorem quo
-        eaque quas reprehenderit consectetur est ut provident totam, et commodi laudantium sit numquam, quod id quae
-        necessitatibus aut, alias eius perferendis eos temporibus amet! Tempore laudantium, eos alias quasi id illum
-        delectus exercitationem ipsam quis vel? Necessitatibus esse alias deserunt.</p>
+<div class="container d-flex justify-content-around align-items-center text-white ">
+    @if(questions[pragraphNumber])
+    {
+        <p>{{questions[pragraphNumber].paragraph }}</p>
+    }
 
 </div>
 

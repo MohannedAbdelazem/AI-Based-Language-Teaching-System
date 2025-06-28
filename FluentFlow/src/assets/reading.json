@@ -1,26 +1,67 @@
 {
-  "reading": 
-  [
+  "reading": [
     {
       "paragraphTitle": "The Cow",
       "paragraph": "The cow is a domestic animal. It gives us milk and eats grass. Cows are found in many countries around the world.",
-      "question": "What does the cow eat?",
-      "choices": ["grass", "milk", "meat", "carrots"],
-      "rightAnswer": "grass"
+      "questions": [
+        {
+          "question": "What does the cow eat?",
+          "choices": ["grass", "milk", "meat", "carrots"],
+          "rightAnswer": "grass"
+        },
+        {
+          "question": "What does the cow give us?",
+          "choices": ["Meat", "Milk", "Eggs", "Cheese"],
+          "rightAnswer": "Milk"
+        },
+        {
+          "question": "Where are cows found?",
+          "choices": ["Only in India", "Only in farms", "In many countries", "Only in zoos"],
+          "rightAnswer": "In many countries"
+        }
+      ]
     },
     {
       "paragraphTitle": "The Moon",
       "paragraph": "The moon is Earth's only natural satellite. It shines at night by reflecting the light of the sun. People have walked on the moon.",
-      "question": "How does the moon shine?",
-      "choices": ["By burning gas", "By reflecting sunlight", "By its own light", "By glowing in the dark"],
-      "rightAnswer": "By reflecting sunlight"
+      "questions": [
+        {
+          "question": "How does the moon shine?",
+          "choices": ["By burning gas", "By reflecting sunlight", "By its own light", "By glowing in the dark"],
+          "rightAnswer": "By reflecting sunlight"
+        },
+        {
+          "question": "What is the moon?",
+          "choices": ["A planet", "A star", "A satellite", "A comet"],
+          "rightAnswer": "A satellite"
+        },
+        {
+          "question": "Who has walked on the moon?",
+          "choices": ["Aliens", "Birds", "People", "Robots"],
+          "rightAnswer": "People"
+        }
+      ]
     },
     {
       "paragraphTitle": "The Library",
       "paragraph": "A library is a place where people go to read or borrow books. It is usually very quiet. Many students go there to study.",
-      "question": "Why do students go to the library?",
-      "choices": ["To play", "To sing", "To study", "To sleep"],
-      "rightAnswer": "To study"
+      "questions": [
+        {
+          "question": "Why do students go to the library?",
+          "choices": ["To play", "To sing", "To study", "To sleep"],
+          "rightAnswer": "To study"
+        },
+        {
+          "question": "What can people do at the library?",
+          "choices": ["Buy books", "Read or borrow books", "Watch movies", "Eat food"],
+          "rightAnswer": "Read or borrow books"
+        },
+        {
+          "question": "What is the library usually like?",
+          "choices": ["Noisy", "Crowded", "Very quiet", "Colorful"],
+          "rightAnswer": "Very quiet"
+        }
+      ]
     }
   ]
 }
