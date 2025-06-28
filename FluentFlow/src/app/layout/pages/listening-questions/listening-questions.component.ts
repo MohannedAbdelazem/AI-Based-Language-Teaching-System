@@ -1,7 +1,10 @@
 import { Component, ElementRef, ViewChild, EventEmitter, Output, AfterViewInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-listening-questions',
+  standalone: true,
+  imports: [RouterLink],
   templateUrl: './listening-questions.component.html',
   styleUrls: ['./listening-questions.component.scss']
 })

@@ -1,5 +1,6 @@
+import { QuestionsService } from './../../../services/Questions/questions.service';
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { log } from 'console';
 
 @Component({
@@ -9,7 +10,16 @@ import { log } from 'console';
   templateUrl: './test-question.component.html',
   styleUrl: './test-question.component.scss'
 })
-export class TestQuestionComponent  {
+export class TestQuestionComponent implements OnInit 
+{
+
+  id: string | null = null;
+  constructor(private route: ActivatedRoute, _QuestionsService:QuestionsService) {}
+
+  ngOnInit(): void 
+  {
+    this.id = this.route.snapshot.paramMap.get('id');
+  }
 
 
   currentClickedFlag!: HTMLElement;

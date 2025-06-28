@@ -1,0 +1,26 @@
+{
+  "reading": 
+  [
+    {
+      "paragraphTitle": "The Cow",
+      "paragraph": "The cow is a domestic animal. It gives us milk and eats grass. Cows are found in many countries around the world.",
+      "question": "What does the cow eat?",
+      "choices": ["grass", "milk", "meat", "carrots"],
+      "rightAnswer": "grass"
+    },
+    {
+      "paragraphTitle": "The Moon",
+      "paragraph": "The moon is Earth's only natural satellite. It shines at night by reflecting the light of the sun. People have walked on the moon.",
+      "question": "How does the moon shine?",
+      "choices": ["By burning gas", "By reflecting sunlight", "By its own light", "By glowing in the dark"],
+      "rightAnswer": "By reflecting sunlight"
+    },
+    {
+      "paragraphTitle": "The Library",
+      "paragraph": "A library is a place where people go to read or borrow books. It is usually very quiet. Many students go there to study.",
+      "question": "Why do students go to the library?",
+      "choices": ["To play", "To sing", "To study", "To sleep"],
+      "rightAnswer": "To study"
+    }
+  ]
+}

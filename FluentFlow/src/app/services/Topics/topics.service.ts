@@ -10,7 +10,8 @@ export class TopicsService {
   private jsonUrl = '../../../assets/topics.json';
   constructor(private _HttpClient: HttpClient) { }
 
-  getTopics() :Observable<any> {
+  getTopics() :Observable<any> 
+  {
     return this._HttpClient.get(this.jsonUrl);
   }
 

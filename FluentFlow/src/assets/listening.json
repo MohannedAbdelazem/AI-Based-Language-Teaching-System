@@ -1,0 +1,26 @@
+{
+    "listening": 
+    [
+        {
+        "title": "City Lights (instrumental intro)",
+        "audioUrl": "https://www.dropbox.com/s/mvvwaw1msplnteq/City%20Lights%20-%20The%20Lemming%20Shepherds.mp3?raw=1",
+        "question": "What mood does the music create?",
+        "choices": ["Energetic", "Relaxed", "Sad", "Tense"],
+        "rightAnswer": "Relaxed"
+        },
+        {
+        "title": "Robot Coupe (synth pop)",
+        "audioUrl": "https://www.dropbox.com/s/st4revqay97jncu/Robot%20Coupe%20-%20Lost%20European.wav?raw=1",
+        "question": "What genre is the music?",
+        "choices": ["Jazz", "Folk", "Synth pop", "Classical"],
+        "rightAnswer": "Synth pop"
+        },
+        {
+        "title": "Memories of a Friend (smooth jazz)",
+        "audioUrl": "https://www.dropbox.com/s/xci6pjthkc751e8/Memories%20of%20a%20Friend.mp3?raw=1",
+        "question": "Which instrument is most prominent?",
+        "choices": ["Guitar", "Saxophone", "Piano", "Drums"],
+        "rightAnswer": "Saxophone"
+        }
+    ]
+}
