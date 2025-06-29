@@ -8,7 +8,10 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class QuestionsService {
 
-  questions:BehaviorSubject<any> = new BehaviorSubject (null);
+  readingQuestions:BehaviorSubject<any> = new BehaviorSubject (null);
+  listeningQuestions:BehaviorSubject<any> = new BehaviorSubject (null);
+  grammarQuestions:BehaviorSubject<any> = new BehaviorSubject (null);
+  questions:BehaviorSubject<any> = new BehaviorSubject(null);
 
   constructor(private HttpClient:HttpClient) { }
 
@@ -16,6 +19,7 @@ export class QuestionsService {
   {
     const data = this.HttpClient.get('../../../assets/reading.json');
     data.subscribe((resolvedData) => {
+      this.readingQuestions.next(resolvedData);
       this.questions.next(resolvedData);
     });
     return data;
@@ -25,6 +29,7 @@ export class QuestionsService {
   {
     const data = this.HttpClient.get('../../../assets/listening.json');
     data.subscribe((resolvedData) => {
+      this.listeningQuestions.next(resolvedData);
       this.questions.next(resolvedData);
     });
     return data;
@@ -34,6 +39,7 @@ export class QuestionsService {
   {
     const data = this.HttpClient.get('../../../assets/grammar.json');
     data.subscribe((resolvedData) => {
+      this.grammarQuestions.next(resolvedData);
       this.questions.next(resolvedData);
     });
     return data;

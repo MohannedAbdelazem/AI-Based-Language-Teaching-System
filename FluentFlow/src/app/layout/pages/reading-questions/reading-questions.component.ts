@@ -18,11 +18,14 @@ export class ReadingQuestionsComponent implements OnInit
 
   ngOnInit(): void 
   {
+    if(this._QuestionsService.readingQuestions.getValue() !== null)
+    {
+        this.questions = this._QuestionsService.readingQuestions.getValue().reading;
+        return;
+    }
     this._QuestionsService.getReadingQuestions().subscribe((data) => {
       this.questions = data.reading;
     });
-
   }
-
-
+  
 }

@@ -18,6 +18,7 @@ export class TestQuestionComponent implements OnInit
   questionNumber: number = 0;
   questions: GeneralQuestion[] = [];
   currentQuestion: GeneralQuestion | null = null;
+  correctAnswer: string = '';
   constructor(private route: ActivatedRoute, private _QuestionsService:QuestionsService, private _Router:Router) {}
 
   ngOnInit(): void 
@@ -41,6 +42,58 @@ export class TestQuestionComponent implements OnInit
         }
       }
     });
+  }
+
+  checkAnswer(answer: string): boolean {
+    const answerContainer = document.querySelector('.answer-container div') as HTMLElement;
+
+    if (this.currentQuestion) {
+      const isCorrect = this.currentQuestion.rightAnswer === answer;
+
+      if (answerContainer) {
+        // Remove existing classes
+        answerContainer.classList.remove('answer-checking-correct', 'answer-checking-wrong');
+
+        // Add the appropriate class
+        answerContainer.classList.add(isCorrect ? 'answer-checking-correct' : 'answer-checking-wrong');
+
+        answerContainer.innerText = isCorrect ? "That's correct" : "That's wrong";
+        // Trigger the animation
+        answerContainer.style.transform = 'scale(1)';
+        answerContainer.style.opacity = '1';
+
+
+        // Reset the animation after a delay
+        setTimeout(() => {
+          answerContainer.style.transform = 'scale(0.2)';
+          answerContainer.style.opacity = '0';
+        }, 1000); // Animation duration
+      }
+
+      return isCorrect;
+    }
+
+    return false;
+  }
+
+  submitAnswer(): void {
+    const selectedAnswer = document.querySelector('.answerClicked') as HTMLElement;
+
+    if (selectedAnswer) {
+      const isCorrect = this.checkAnswer(this.correctAnswer);
+
+      selectedAnswer.classList.remove('answer-correct', 'answer-wrong');
+
+      selectedAnswer.classList.add(isCorrect ? 'answer-correct' : 'answer-wrong');
+
+      setTimeout(() => {
+        selectedAnswer.classList.remove('answer-correct', 'answer-wrong');
+        if(isCorrect)
+        {
+          this.getNextQuestion();
+        }
+      }, 1000);
+    }
   }
 
   getNextQuestion(): void
@@ -71,7 +124,7 @@ export class TestQuestionComponent implements OnInit
     }
     else
     {
-      this._Router.navigate(['/questions-types']);
+      this._Router.navigate(['/reading-questions']);
     }
   }
 
@@ -79,13 +132,16 @@ export class TestQuestionComponent implements OnInit
   currentClickedFlag!: HTMLElement;
   changeStyle(event: MouseEvent)
   {
+    
     let mytarget: HTMLElement;
     if ((event.target as HTMLElement).tagName === 'H1') 
     {
+      this.correctAnswer = (event.target as HTMLElement).innerText;
       mytarget = (event.target as HTMLElement).parentElement as HTMLElement;
     }
     else
     {
+      this.correctAnswer = (event.target as HTMLElement).firstChild?.textContent || '';
       mytarget = event.target as HTMLElement;
     }
 

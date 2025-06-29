@@ -1,4 +1,3 @@
-
 .wave 
 {
   position: relative;
@@ -131,4 +130,54 @@
 {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.answer-container
+{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.answer-checking-correct
+{
+  position: absolute;
+  bottom: 110px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: green;
+  transform: scale(0.2);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.answer-checking-wrong
+{
+  position: absolute;
+  bottom: 110px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: red;
+  transform: scale(0.2);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.answer-correct {
+  background-color: green;
+  transition: background-color 0.3s ease;
+}
+
+.answer-wrong {
+  background-color: red;
+  transition: background-color 0.3s ease;
 }
