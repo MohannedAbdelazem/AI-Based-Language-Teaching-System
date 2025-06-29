@@ -21,10 +21,19 @@ export class ReadingQuestionsComponent implements OnInit
   ngOnInit(): void 
   {
     this.id = this.route.snapshot.paramMap.get('id');
-    if (this.id)
+    if(this.id === 'flags')
     {
-      this.pragraphNumber = parseInt(this.id, 10);
+      this._QuestionsService.requieredQuestions.next(2);
+      
     }
+    else
+    {
+      if (this.id)
+      {
+        this.pragraphNumber = parseInt(this.id, 10);
+      }
+    }
+
     if(this._QuestionsService.readingQuestions.getValue() !== null)
     {
         this.questions = this._QuestionsService.readingQuestions.getValue().reading;

@@ -2,7 +2,7 @@ import { Component, ElementRef, OnInit, QueryList, viewChild, ViewChildren, view
 import { FlagsService } from '../../../services/Flags/flags.service';
 import { Flag } from '../../../interfaces/Flags/flag';
 import { log } from 'console';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-flags',
@@ -13,13 +13,13 @@ import { RouterLink } from '@angular/router';
 })
 export class FlagsComponent implements OnInit 
 {
-
-  // @viewChild
+  counter: number = 1;
 
   currentClickedFlag!: HTMLImageElement;
   flagsRecived: Flag[] = [];
 
-  constructor(private _FlagsService: FlagsService) 
+  question:string = 'What is your native language?';
+  constructor(private _FlagsService: FlagsService, private _Router: Router) 
   {
   }
   ngOnInit(): void {
@@ -51,7 +51,23 @@ export class FlagsComponent implements OnInit
   }
 
   
+  getNextFlag()
+  {
+    if (this.counter == 1)
+    {
+      if (this.currentClickedFlag) 
+      {
+        this.currentClickedFlag.classList.remove('imageclick');
+      }
+      this.counter++;
+      this.question = 'Which language do you want to learn?';
+    }
+    else
+    {
+      this._Router.navigate(['/reading-questions','flags']);
 
+    }
+  }
 
 
 }

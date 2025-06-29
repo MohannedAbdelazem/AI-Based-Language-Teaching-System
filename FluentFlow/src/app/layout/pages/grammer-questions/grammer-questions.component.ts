@@ -21,9 +21,16 @@ export class GrammerQuestionsComponent implements OnInit
   ngOnInit(): void 
   {
     this.id = this.route.snapshot.paramMap.get('id');
-    if (this.id)
+    if (this.id === 'flags')
     {
-      this.questionNumber = parseInt(this.id, 10);
+      this._QuestionsService.requieredQuestions.next(2);
+    }
+    else
+    {
+      if (this.id)
+      {
+          this.questionNumber = parseInt(this.id, 10);
+      }
     }
     if(this._QuestionsService.grammarQuestions.getValue() !== null)
     {

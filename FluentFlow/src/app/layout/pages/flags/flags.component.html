@@ -16,7 +16,7 @@
 </div>
 
 <div class="question d-flex justify-content-center align-items-center">
-  <h1 class="text-white">Which language do you want to learn?</h1>
+  <h1 class="text-white">{{question}}</h1>
 </div>
 <div class="container d-flex justify-content-center align-items-center rounded-4 shadow p-3 mb-5">
   <div class="flags-grid">
@@ -42,7 +42,7 @@
     <button class="button1" routerLink="/login">Previous</button>
   </div>
   <div class="col-6 d-flex justify-content-end align-items-center">
-    <button class="button2" [routerLink]="['/test-question',4]">Next</button>
+    <button class="button2" (click)="getNextFlag()">Next</button>
   </div>
 </div>
 

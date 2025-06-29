@@ -22,44 +22,62 @@ export class TestQuestionComponent implements OnInit
   currentQuestion: GeneralQuestion | null = null;
   correctAnswer: string = '';
   pageName:string | null = null;
+  readingQuestions: any[] = [];
+  listeningQuestions: any[] = [];
+  grammarQuestions: any[] = [];
+  requiredQuestions: number = 0;
   constructor(private route: ActivatedRoute, private _QuestionsService:QuestionsService, private _Router:Router) {}
 
   ngOnInit(): void 
   {
     this.id = this.route.snapshot.paramMap.get('id');
     this.pageName = this.route.snapshot.paramMap.get('pageName');
+    this.requiredQuestions = parseInt(this.route.snapshot.paramMap.get('requiredQuestions') || '0',10);
+    
+    this._QuestionsService.requieredQuestions.subscribe((data) => {
+      this.requiredQuestions = data;
+    }
+    );
+    console.log("Required Questions: " + this.requiredQuestions);
+    
     if (this.id) 
     {
       this.questionNumber = parseInt(this.id, 10);
     }
+   
+    
+    
 
     if(this._QuestionsService.questions.getValue() !== null)
     {
-      const data = this._QuestionsService.questions.getValue();
-      console.log(data);
+      // const data = this._QuestionsService.questions.getValue();
       
       if (this.pageName === 'reading') 
       {
+        const data = this._QuestionsService.readingQuestions.getValue();
         this.numberOfQuestions = data.reading.length;
         this.questions = data.reading[this.questionNumber].questions;
         this.currentQuestion = this.questions[0];
       } 
       else if (this.pageName === 'listening') 
       {
+        const data = this._QuestionsService.listeningQuestions.getValue();
         this.numberOfQuestions = data.listening.length;
         this.questions = data.listening[this.questionNumber].questions;
         this.currentQuestion = this.questions[0];
       } 
       else if( this.pageName === 'grammar')
       {
+        const data = this._QuestionsService.grammarQuestions.getValue();
         this.numberOfQuestions = data.grammar.length;
         this.questions = data.grammar[this.questionNumber].questions;
-        console.log('Questions:', this.questions);
-        
         this.currentQuestion = this.questions[0];
       }
+      
     }
   }
+
+
 
   checkAnswer(answer: string): boolean {
     const answerContainer = document.querySelector('.answer-container div') as HTMLElement;
@@ -122,24 +140,47 @@ export class TestQuestionComponent implements OnInit
     }
     else
     {
+      console.log(this.requiredQuestions +" " + this.questionNumber);
       if( this.questionNumber < this.numberOfQuestions - 1)
       {
-        if ( this.pageName === 'reading') 
+        if ( this.pageName === 'reading' ) 
         {
-          this._Router.navigate(['/reading-questions', this.questionNumber + 1]);
+          if(this.requiredQuestions - 1 <= this.questionNumber)
+          {
+            this._Router.navigate(['/listening-questions', 'flags']);
+          }
+          else
+          {
+            this._Router.navigate(['/reading-questions', this.questionNumber + 1]);
+          }
         } 
-        else if (this.pageName === 'listening') 
+        else if (this.pageName === 'listening' ) 
         {
-          this._Router.navigate(['/listening-questions', this.questionNumber + 1]);
+          if(this.requiredQuestions - 1 <= this.questionNumber )
+          {
+            this._Router.navigate(['/grammar-questions', 'flags']);
+          }
+          else
+          {
+            this._Router.navigate(['/listening-questions', this.questionNumber + 1]);
+          }
+          
         } 
-        else 
+        else if( this.pageName === 'grammar')
         {
-          this._Router.navigate(['/grammar-questions', this.questionNumber + 1]);
+          if(this.requiredQuestions - 1 <= this.questionNumber)
+          {
+            this._Router.navigate(['/profile']);
+          }
+          else
+          {
+            this._Router.navigate(['/grammar-questions', this.questionNumber + 1]);
+          }
         }
       }
       else
       {
-        this._Router.navigate(['/score-page']);
+        this._Router.navigate(['/profile']);
       }
     }
   }

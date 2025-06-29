@@ -12,6 +12,7 @@ export class QuestionsService {
   listeningQuestions:BehaviorSubject<any> = new BehaviorSubject (null);
   grammarQuestions:BehaviorSubject<any> = new BehaviorSubject (null);
   questions:BehaviorSubject<any> = new BehaviorSubject(null);
+  requieredQuestions: BehaviorSubject<any> = new BehaviorSubject(0);
 
   constructor(private HttpClient:HttpClient) { }
 

@@ -3,6 +3,7 @@ import { TopicsService } from '../../../services/Topics/topics.service';
 import { Topic } from '../../../interfaces/Topics/topics';
 import { ProgressComponent } from '../progress/progress.component';
 import { NavbarComponent } from '../../additions/navbar/navbar.component';
+import { QuestionsService } from '../../../services/Questions/questions.service';
 
 
 @Component({
@@ -21,12 +22,13 @@ export class ProfileComponent
   @ViewChildren('lineElement') lineElements!: QueryList<ElementRef>;
   @ViewChild('topicText') topicText!: ElementRef;
 
-  constructor(private __topicService: TopicsService) 
+  constructor(private __topicService: TopicsService, private _QuestionsService:QuestionsService) 
   {
     
   }
   Topics: Topic[] = [];
   ngOnInit() {
+    this._QuestionsService.requieredQuestions.next(200);
     this.__topicService.getTopics().subscribe((data) => {
       this.Topics = data.topics;
     });

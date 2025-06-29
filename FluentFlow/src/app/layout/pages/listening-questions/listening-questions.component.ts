@@ -26,9 +26,16 @@ export class ListeningQuestionsComponent implements OnInit{
   constructor(private _QuestionsService:QuestionsService, private route:ActivatedRoute) { }
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    if (id) 
+    if (id === 'flags') 
     {
-      this.currentTrackIndex = parseInt(id, 10);
+      this._QuestionsService.requieredQuestions.next(2);
+    }
+    else 
+    {
+      if(id)
+      {
+        this.currentTrackIndex = parseInt(id, 10);
+      }
     }
     if(this._QuestionsService.listeningQuestions.getValue() !== null)
     {
