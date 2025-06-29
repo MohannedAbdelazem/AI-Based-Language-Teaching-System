@@ -36,6 +36,8 @@ export class TestQuestionComponent implements OnInit
     if(this._QuestionsService.questions.getValue() !== null)
     {
       const data = this._QuestionsService.questions.getValue();
+      console.log(data);
+      
       if (this.pageName === 'reading') 
       {
         this.numberOfQuestions = data.reading.length;
@@ -48,10 +50,12 @@ export class TestQuestionComponent implements OnInit
         this.questions = data.listening[this.questionNumber].questions;
         this.currentQuestion = this.questions[0];
       } 
-      else 
+      else if( this.pageName === 'grammar')
       {
         this.numberOfQuestions = data.grammar.length;
         this.questions = data.grammar[this.questionNumber].questions;
+        console.log('Questions:', this.questions);
+        
         this.currentQuestion = this.questions[0];
       }
     }
@@ -126,11 +130,11 @@ export class TestQuestionComponent implements OnInit
         } 
         else if (this.pageName === 'listening') 
         {
-          this._Router.navigate(['/listening-questions', this.questionNumber]);
+          this._Router.navigate(['/listening-questions', this.questionNumber + 1]);
         } 
         else 
         {
-          this._Router.navigate(['/grammar-questions', this.questionNumber]);
+          this._Router.navigate(['/grammar-questions', this.questionNumber + 1]);
         }
       }
       else

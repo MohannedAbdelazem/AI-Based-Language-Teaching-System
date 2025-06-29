@@ -43,7 +43,6 @@ export class FlagsComponent implements OnInit
     this._FlagsService.getFlags().subscribe({
       next: (res) => {
         this.flagsRecived = res.slice(0, 10);
-        console.log('Flags fetched successfully:', this.flagsRecived);
       },  
       error: (err) => {
         console.error('Error fetching flags:', err);

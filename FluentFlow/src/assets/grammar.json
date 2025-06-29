@@ -1,29 +1,44 @@
 {
-    "grammar": 
-    [
+  "grammar": [
+    {
+      "title": "Present Simple",
+      "questions": [
         {
-        "title": "Present Simple",
-        "question": "Mohamed ....... to school.",
-        "choices": ["going", "went", "go", "had gone"],
-        "rightAnswer": "go"
-        },
-        {
-        "title": "Past Simple",
-        "question": "Sara ....... a cake yesterday.",
-        "choices": ["bakes", "bake", "baked", "baking"],
-        "rightAnswer": "baked"
-        },
-        {
-        "title": "Future Tense",
-        "question": "They ....... visit the museum tomorrow.",
-        "choices": ["will", "went", "going", "have"],
-        "rightAnswer": "will"
-        },
-        {
-        "title": "Present Continuous",
-        "question": "He is ....... TV right now.",
-        "choices": ["watch", "watched", "watching", "watches"],
-        "rightAnswer": "watching"
+          "question": "Mohamed ....... to school.",
+          "choices": ["going", "went", "go", "had gone"],
+          "rightAnswer": "go"
         }
-    ]
+      ]
+    },
+    {
+      "title": "Past Simple",
+      "questions": [
+        {
+          "question": "Sara ....... a cake yesterday.",
+          "choices": ["bakes", "bake", "baked", "baking"],
+          "rightAnswer": "baked"
+        }
+      ]
+    },
+    {
+      "title": "Future Tense",
+      "questions": [
+        {
+          "question": "They ....... visit the museum tomorrow.",
+          "choices": ["will", "went", "going", "have"],
+          "rightAnswer": "will"
+        }
+      ]
+    },
+    {
+      "title": "Present Continuous",
+      "questions": [
+        {
+          "question": "He is ....... TV right now.",
+          "choices": ["watch", "watched", "watching", "watches"],
+          "rightAnswer": "watching"
+        }
+      ]
+    }
+  ]
 }

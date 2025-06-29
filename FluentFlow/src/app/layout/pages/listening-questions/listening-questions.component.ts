@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild, EventEmitter, Output, AfterViewInit, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { QuestionsService } from '../../../services/Questions/questions.service';
 import { ListeningData } from '../../../interfaces/Listening/listening';
 
@@ -14,8 +14,22 @@ export class ListeningQuestionsComponent implements OnInit{
 
   questions: ListeningData[] = [];
   listening: string = 'listening';
-  constructor(private _QuestionsService:QuestionsService) { }
+  @ViewChild('audioElement') audioElement!: ElementRef<HTMLAudioElement>;
+  isPlaying = false;
+  duration = 0;
+  currentTime = 0;
+  progressPercentage = 0;
+  audio: HTMLAudioElement | null = null;
+
+  currentTrackIndex = 0;
+
+  constructor(private _QuestionsService:QuestionsService, private route:ActivatedRoute) { }
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) 
+    {
+      this.currentTrackIndex = parseInt(id, 10);
+    }
     if(this._QuestionsService.listeningQuestions.getValue() !== null)
     {
         this.questions = this._QuestionsService.listeningQuestions.getValue().listening;
@@ -25,16 +39,6 @@ export class ListeningQuestionsComponent implements OnInit{
       this.questions = data.listening;
     });
   }
-  @ViewChild('audioElement') audioElement!: ElementRef<HTMLAudioElement>;
-
-  isPlaying = false;
-  duration = 0;
-  currentTime = 0;
-  progressPercentage = 0;
-  audio: HTMLAudioElement | null = null;
-
-
-  currentTrackIndex = 0;
 
   get currentTrack() {
     return this.questions[this.currentTrackIndex];
