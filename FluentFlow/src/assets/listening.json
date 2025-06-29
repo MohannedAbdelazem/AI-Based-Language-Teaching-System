@@ -2,25 +2,73 @@
     "listening": 
     [
         {
-        "title": "City Lights (instrumental intro)",
-        "audioUrl": "https://www.dropbox.com/s/mvvwaw1msplnteq/City%20Lights%20-%20The%20Lemming%20Shepherds.mp3?raw=1",
-        "question": "What mood does the music create?",
-        "choices": ["Energetic", "Relaxed", "Sad", "Tense"],
-        "rightAnswer": "Relaxed"
+            "id": 1,
+            "title": "City Lights (instrumental intro)",
+            "audioUrl": "https://www.dropbox.com/s/mvvwaw1msplnteq/City%20Lights%20-%20The%20Lemming%20Shepherds.mp3?raw=1",
+            "questions": 
+            [
+                {
+                    "question": "What mood does the music create?",
+                    "choices": ["Energetic", "Relaxed", "Sad", "Tense"],
+                    "rightAnswer": "Relaxed"
+                },
+                {
+                    "question": "What tempo would you describe this music as?",
+                    "choices": ["Very fast", "Moderate", "Slow", "Very slow"],
+                    "rightAnswer": "Slow"
+                },
+                {
+                    "question": "What type of instruments do you hear?",
+                    "choices": ["Electronic only", "Acoustic only", "Mix of both", "Vocals only"],
+                    "rightAnswer": "Acoustic only"
+                }
+            ]
         },
         {
-        "title": "Robot Coupe (synth pop)",
-        "audioUrl": "https://www.dropbox.com/s/st4revqay97jncu/Robot%20Coupe%20-%20Lost%20European.wav?raw=1",
-        "question": "What genre is the music?",
-        "choices": ["Jazz", "Folk", "Synth pop", "Classical"],
-        "rightAnswer": "Synth pop"
+            "id": 2,
+            "title": "Robot Coupe (synth pop)",
+            "audioUrl": "https://www.dropbox.com/s/st4revqay97jncu/Robot%20Coupe%20-%20Lost%20European.wav?raw=1",
+            "questions": 
+            [
+                {
+                    "question": "What genre is the music?",
+                    "choices": ["Jazz", "Folk", "Synth pop", "Classical"],
+                    "rightAnswer": "Synth pop"
+                },
+                {
+                    "question": "What decade does this music style represent?",
+                    "choices": ["1960s", "1970s", "1980s", "1990s"],
+                    "rightAnswer": "1980s"
+                },
+                {
+                    "question": "What is the primary characteristic of this genre?",
+                    "choices": ["Acoustic guitars", "Synthesizers", "Live drums", "String sections"],
+                    "rightAnswer": "Synthesizers"
+                }
+            ]
         },
         {
-        "title": "Memories of a Friend (smooth jazz)",
-        "audioUrl": "https://www.dropbox.com/s/xci6pjthkc751e8/Memories%20of%20a%20Friend.mp3?raw=1",
-        "question": "Which instrument is most prominent?",
-        "choices": ["Guitar", "Saxophone", "Piano", "Drums"],
-        "rightAnswer": "Saxophone"
+            "id": 3,
+            "title": "Memories of a Friend (smooth jazz)",
+            "audioUrl": "https://www.dropbox.com/s/xci6pjthkc751e8/Memories%20of%20a%20Friend.mp3?raw=1",
+            "questions": 
+            [
+                {
+                    "question": "Which instrument is most prominent?",
+                    "choices": ["Guitar", "Saxophone", "Piano", "Drums"],
+                    "rightAnswer": "Saxophone"
+                },
+                {
+                    "question": "What is the overall feel of this jazz piece?",
+                    "choices": ["Upbeat and energetic", "Smooth and mellow", "Dark and moody", "Fast and complex"],
+                    "rightAnswer": "Smooth and mellow"
+                },
+                {
+                    "question": "What time signature does this music likely use?",
+                    "choices": ["3/4 (waltz)", "4/4 (common time)", "6/8 (compound)", "5/4 (irregular)"],
+                    "rightAnswer": "4/4 (common time)"
+                }
+            ]
         }
     ]
 }

@@ -1,13 +1,13 @@
 import { QuestionsService } from './../../../services/Questions/questions.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { log } from 'console';
 import { GeneralQuestion } from '../../../interfaces/generalQuestion/general-question';
 
 @Component({
   selector: 'app-test-question',
   standalone: true,
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './test-question.component.html',
   styleUrl: './test-question.component.scss'
 })
@@ -28,20 +28,27 @@ export class TestQuestionComponent implements OnInit
     {
       this.questionNumber = parseInt(this.id, 10);
     }
-    this._QuestionsService.questions.subscribe((data) => {
-      if (data) {
-        if (data.reading !== null) {
-          this.questions = data.reading[this.questionNumber].questions;
-          this.currentQuestion = this.questions[0];
-        } else if (data.listening !== null ) {
-          this.questions = data.listening[this.questionNumber].questions;
-          this.currentQuestion = this.questions[0];
-        } else if (data.grammar !== null) {
-          this.questions = data.grammar[this.questionNumber].questions;
-          this.currentQuestion = this.questions[0];
-        }
+
+    if(this._QuestionsService.questions.getValue() !== null)
+    {
+      const data = this._QuestionsService.questions.getValue();
+      if (data.reading) 
+      {
+        this.questions = data.reading[this.questionNumber].questions;
+        this.currentQuestion = this.questions[0];
+      } 
+      else if (data.listening) 
+      {
+        console.log('Listening data found:', data.listening);
+        this.questions = data.listening[this.questionNumber].questions;
+        this.currentQuestion = this.questions[0];
+      } 
+      else if (data.grammar) 
+      {
+        this.questions = data.grammar[this.questionNumber].questions;
+        this.currentQuestion = this.questions[0];
       }
-    });
+    }
   }
 
   checkAnswer(answer: string): boolean {
@@ -51,23 +58,20 @@ export class TestQuestionComponent implements OnInit
       const isCorrect = this.currentQuestion.rightAnswer === answer;
 
       if (answerContainer) {
-        // Remove existing classes
+
         answerContainer.classList.remove('answer-checking-correct', 'answer-checking-wrong');
 
-        // Add the appropriate class
         answerContainer.classList.add(isCorrect ? 'answer-checking-correct' : 'answer-checking-wrong');
 
         answerContainer.innerText = isCorrect ? "That's correct" : "That's wrong";
-        // Trigger the animation
+
         answerContainer.style.transform = 'scale(1)';
         answerContainer.style.opacity = '1';
 
-
-        // Reset the animation after a delay
         setTimeout(() => {
           answerContainer.style.transform = 'scale(0.2)';
           answerContainer.style.opacity = '0';
-        }, 1000); // Animation duration
+        }, 1000);
       }
 
       return isCorrect;
@@ -124,7 +128,22 @@ export class TestQuestionComponent implements OnInit
     }
     else
     {
-      this._Router.navigate(['/reading-questions']);
+      if(this._QuestionsService.questions.getValue() !== null)
+      {
+        const data = this._QuestionsService.questions.getValue();
+        if (data.reading) 
+        {
+          this._Router.navigate(['/reading-questions']);
+        } 
+        else if (data.listening) 
+        {
+          this._Router.navigate(['/listening-questions']);
+        } 
+        else if (data.grammar) 
+        {
+          this._Router.navigate(['/grammar-questions']);
+        }
+      }
     }
   }
 

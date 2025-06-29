@@ -1,5 +1,7 @@
-import { Component, ElementRef, ViewChild, EventEmitter, Output, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, EventEmitter, Output, AfterViewInit, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { QuestionsService } from '../../../services/Questions/questions.service';
+import { ListeningData } from '../../../interfaces/Listening/listening';
 
 @Component({
   selector: 'app-listening-questions',
@@ -8,7 +10,20 @@ import { RouterLink } from '@angular/router';
   templateUrl: './listening-questions.component.html',
   styleUrls: ['./listening-questions.component.scss']
 })
-export class ListeningQuestionsComponent{
+export class ListeningQuestionsComponent implements OnInit{
+
+  questions: ListeningData[] = [];
+  constructor(private _QuestionsService:QuestionsService) { }
+  ngOnInit(): void {
+    if(this._QuestionsService.listeningQuestions.getValue() !== null)
+    {
+        this.questions = this._QuestionsService.listeningQuestions.getValue().listening;
+        return;
+    }
+    this._QuestionsService.getListeningQuestions().subscribe((data) => {
+      this.questions = data.listening;
+    });
+  }
   @ViewChild('audioElement') audioElement!: ElementRef<HTMLAudioElement>;
 
   isPlaying = false;
@@ -17,25 +32,11 @@ export class ListeningQuestionsComponent{
   progressPercentage = 0;
   audio: HTMLAudioElement | null = null;
 
-  playlist = [
-    {
-      id: '1',
-      title: 'Track 1',
-      artist: 'Artist 1',
-      url: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
-    },
-    {
-      id: '2',
-      title: 'Track 2',
-      artist: 'Artist 2',
-      url: 'https://example.com/track2.mp3'
-    }
-  ];
 
   currentTrackIndex = 0;
 
   get currentTrack() {
-    return this.playlist[this.currentTrackIndex];
+    return this.questions[this.currentTrackIndex];
   }
 
   togglePlay(): void {
@@ -82,7 +83,7 @@ export class ListeningQuestionsComponent{
 
   loadCurrentTrack(): void {
     const audio = this.audioElement.nativeElement;
-    audio.src = this.currentTrack.url;
+    audio.src = this.currentTrack.audioUrl;
     audio.load();
   }
 
