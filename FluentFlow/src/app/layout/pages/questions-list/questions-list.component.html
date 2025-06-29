@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid">
+    <div class="row gap-5  d-flex justify-content-center align-items-center  ">
+        @for (question of questions; track $index) 
+        {
+            <div class="col-lg-12">
+                <div class="box ">
+                    <div (click)="getIndex($index)" class="answer d-flex justify-content-center align-items-center">
+                        <h1 > {{question.title}}</h1>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

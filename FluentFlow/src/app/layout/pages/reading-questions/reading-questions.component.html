@@ -1,9 +1,9 @@
 <div class="Logo">
-    <img src="./assets/Logo.png" alt="">
+    <img routerLink="/profile" src="./assets/Logo.png" alt="">
     <div class="question-title text-white">
         @if (questions[pragraphNumber]) 
         {
-            <h1 class=" ms-4 ">Reading : {{questions[pragraphNumber].paragraphTitle}} </h1>
+            <h1 class=" ms-4 ">Reading : {{questions[pragraphNumber].title}} </h1>
         }
     </div>
 </div>
@@ -27,9 +27,9 @@
 
 <div class="row d-flex justify-content-center align-items-center buttons">
     <div class=" col-6 d-flex justify-content-start align-items-center">
-        <button class="button1" routerLink="/flags">Previous</button>
+        <button class="button1" [routerLink]="['/questions-list',1]">Previous</button>
     </div>
     <div class="col-6 d-flex justify-content-end align-items-center">
-        <button class="button2" [routerLink]="['/test-question',pragraphNumber]">Next</button>
+        <button class="button2" [routerLink]="['/test-question',pragraphNumber,reading]">Next</button>
     </div>
 </div>

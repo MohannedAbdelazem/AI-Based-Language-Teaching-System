@@ -1,7 +1,7 @@
 {
   "reading": [
     {
-      "paragraphTitle": "The Cow",
+      "title": "The Cow",
       "paragraph": "The cow is a domestic animal. It gives us milk and eats grass. Cows are found in many countries around the world.",
       "questions": [
         {
@@ -22,7 +22,7 @@
       ]
     },
     {
-      "paragraphTitle": "The Moon",
+      "title": "The Moon",
       "paragraph": "The moon is Earth's only natural satellite. It shines at night by reflecting the light of the sun. People have walked on the moon.",
       "questions": [
         {
@@ -43,7 +43,7 @@
       ]
     },
     {
-      "paragraphTitle": "The Library",
+      "title": "The Library",
       "paragraph": "A library is a place where people go to read or borrow books. It is usually very quiet. Many students go there to study.",
       "questions": [
         {

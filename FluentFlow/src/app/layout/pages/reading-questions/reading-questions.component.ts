@@ -1,6 +1,6 @@
 import { QuestionsService } from './../../../services/Questions/questions.service';
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ReadingData } from '../../../interfaces/Reading/reading';
 
 @Component({
@@ -12,12 +12,19 @@ import { ReadingData } from '../../../interfaces/Reading/reading';
 })
 export class ReadingQuestionsComponent implements OnInit
 {
+  id: string | null = null;
   questions: ReadingData[]  = [] ;
   pragraphNumber: number = 0;
-  constructor(private _QuestionsService:QuestionsService) { }
+  reading: string = 'reading';
+  constructor(private _QuestionsService:QuestionsService, private route:ActivatedRoute) { }
 
   ngOnInit(): void 
   {
+    this.id = this.route.snapshot.paramMap.get('id');
+    if (this.id)
+    {
+      this.pragraphNumber = parseInt(this.id, 10);
+    }
     if(this._QuestionsService.readingQuestions.getValue() !== null)
     {
         this.questions = this._QuestionsService.readingQuestions.getValue().reading;

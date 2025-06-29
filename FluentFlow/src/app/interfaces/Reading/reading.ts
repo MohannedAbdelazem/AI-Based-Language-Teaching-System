@@ -1,5 +1,5 @@
 export interface ReadingData {
-  paragraphTitle: string;
+  title: string;
   paragraph: string;
   questions: Question[];
 }

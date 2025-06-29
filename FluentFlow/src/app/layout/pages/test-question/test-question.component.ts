@@ -1,13 +1,13 @@
 import { QuestionsService } from './../../../services/Questions/questions.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { log } from 'console';
 import { GeneralQuestion } from '../../../interfaces/generalQuestion/general-question';
 
 @Component({
   selector: 'app-test-question',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './test-question.component.html',
   styleUrl: './test-question.component.scss'
 })
@@ -15,15 +15,19 @@ export class TestQuestionComponent implements OnInit
 {
 
   id: string | null = null;
+  numberOfQuestions: number = 0;
   questionNumber: number = 0;
+  subQuestionNumber: number = 0;
   questions: GeneralQuestion[] = [];
   currentQuestion: GeneralQuestion | null = null;
   correctAnswer: string = '';
+  pageName:string | null = null;
   constructor(private route: ActivatedRoute, private _QuestionsService:QuestionsService, private _Router:Router) {}
 
   ngOnInit(): void 
   {
     this.id = this.route.snapshot.paramMap.get('id');
+    this.pageName = this.route.snapshot.paramMap.get('pageName');
     if (this.id) 
     {
       this.questionNumber = parseInt(this.id, 10);
@@ -32,19 +36,21 @@ export class TestQuestionComponent implements OnInit
     if(this._QuestionsService.questions.getValue() !== null)
     {
       const data = this._QuestionsService.questions.getValue();
-      if (data.reading) 
+      if (this.pageName === 'reading') 
       {
+        this.numberOfQuestions = data.reading.length;
         this.questions = data.reading[this.questionNumber].questions;
         this.currentQuestion = this.questions[0];
       } 
-      else if (data.listening) 
+      else if (this.pageName === 'listening') 
       {
-        console.log('Listening data found:', data.listening);
+        this.numberOfQuestions = data.listening.length;
         this.questions = data.listening[this.questionNumber].questions;
         this.currentQuestion = this.questions[0];
       } 
-      else if (data.grammar) 
+      else 
       {
+        this.numberOfQuestions = data.grammar.length;
         this.questions = data.grammar[this.questionNumber].questions;
         this.currentQuestion = this.questions[0];
       }
@@ -105,14 +111,32 @@ export class TestQuestionComponent implements OnInit
     if (this.currentClickedFlag) {
       this.currentClickedFlag.classList.remove('answerClicked');
     }
-    if (this.questionNumber < this.questions.length - 1) 
+    if (this.subQuestionNumber < this.questions.length - 1) 
     {
-      this.questionNumber++;
-      this.currentQuestion = this.questions[this.questionNumber];
+      this.subQuestionNumber++;
+      this.currentQuestion = this.questions[this.subQuestionNumber];
     }
     else
     {
-      this._Router.navigate(['/profile']);
+      if( this.questionNumber < this.numberOfQuestions - 1)
+      {
+        if ( this.pageName === 'reading') 
+        {
+          this._Router.navigate(['/reading-questions', this.questionNumber + 1]);
+        } 
+        else if (this.pageName === 'listening') 
+        {
+          this._Router.navigate(['/listening-questions', this.questionNumber]);
+        } 
+        else 
+        {
+          this._Router.navigate(['/grammar-questions', this.questionNumber]);
+        }
+      }
+      else
+      {
+        this._Router.navigate(['/score-page']);
+      }
     }
   }
 
@@ -121,28 +145,25 @@ export class TestQuestionComponent implements OnInit
     if (this.currentClickedFlag) {
       this.currentClickedFlag.classList.remove('answerClicked');
     }
-    if (this.questionNumber > 0) 
+    if (this.subQuestionNumber > 0) 
     {
-      this.questionNumber--;
-      this.currentQuestion = this.questions[this.questionNumber];
+      this.subQuestionNumber--;
+      this.currentQuestion = this.questions[this.subQuestionNumber];
     }
     else
     {
-      if(this._QuestionsService.questions.getValue() !== null)
+
+      if ( this.pageName === 'reading') 
       {
-        const data = this._QuestionsService.questions.getValue();
-        if (data.reading) 
-        {
-          this._Router.navigate(['/reading-questions']);
-        } 
-        else if (data.listening) 
-        {
-          this._Router.navigate(['/listening-questions']);
-        } 
-        else if (data.grammar) 
-        {
-          this._Router.navigate(['/grammar-questions']);
-        }
+        this._Router.navigate(['/reading-questions', this.questionNumber]);
+      } 
+      else if (this.pageName === 'listening') 
+      {
+        this._Router.navigate(['/listening-questions', this.questionNumber]);
+      } 
+      else 
+      {
+        this._Router.navigate(['/grammar-questions', this.questionNumber]);
       }
     }
   }

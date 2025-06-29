@@ -13,6 +13,7 @@ import { ListeningData } from '../../../interfaces/Listening/listening';
 export class ListeningQuestionsComponent implements OnInit{
 
   questions: ListeningData[] = [];
+  listening: string = 'listening';
   constructor(private _QuestionsService:QuestionsService) { }
   ngOnInit(): void {
     if(this._QuestionsService.listeningQuestions.getValue() !== null)
