@@ -1,51 +1,51 @@
 <app-navbar ></app-navbar>
 <div class="container page">
-        <div class="row ">
-            <div class="col">
-                <app-progress class="user-progress"></app-progress>
-            </div>
-            <div class="col ">
-                <div class="hiding"></div>
-                <div #topicText class="row title-topic mb-5">
-                    <div class="col">
-                        <p class="title">Section {{titleNumber}}</p>
-                        <p class="topic">{{title}}</p>
-                    </div>
-                    <div class="col d-flex justify-content-end align-items-center">
-                        <button>Details</button>
-                    </div>
+    <div class="row ">
+        <div class="col">
+            <app-progress class="user-progress"></app-progress>
+        </div>
+        <div class="col ">
+            <div class="hiding"></div>
+            <div #topicText class="row title-topic mb-5">
+                <div class="col">
+                    <p class="title">Section {{titleNumber}}</p>
+                    <p class="topic">{{title}}</p>
                 </div>
-                <div class="main-topic">
-                    <div class="row  d-flex justify-content-center container-fluid learning-lessons">
-                        @for (topic of Topics; track $index) 
+                <div class="col d-flex justify-content-end align-items-center">
+                    <button>Details</button>
+                </div>
+            </div>
+            <div class="main-topic">
+                <div class="row  d-flex justify-content-center container-fluid learning-lessons">
+                    @for (topic of Topics; let i = $index; track i) 
+                    {
+                        @for (chapter of generateRange(topic.chaptersNum); let j = $index; track j) 
                         {
-                            @for (chapter of generateRange(topic.chaptersNum); track $index) 
-                            {
-                                <div class="col-lg-4 lessons  ">
-                                    <div class="lesson  ">
-                                        <p class="text-white fs-3 fw-bold  ">{{chapter}}</p>
-                                    </div>
-                                </div>
-                            }
-                            <div #lineElement class="row  d-flex justify-content-center align-items-center my-4">
-                                <div class="col-auto flex-grow-1">
-                                    <div class="line"></div>
-                                </div>
-                                <div class="col-auto">
-                                    <p class="line-topic m-0 px-3">{{ topic.topic }}</p>
-                                </div>
-                                <div class="col-auto flex-grow-1">
-                                    <div  class="line"></div>
+                            <div class="col-lg-4 lessons"  (click)="goToLesson(i, chapter - 1)">
+                                <div class="lesson">
+                                    <p class="text-white fs-3 fw-bold ">{{chapter}}</p>
                                 </div>
                             </div>
-
                         }
-                    </div>
+                        <div #lineElement class="row  d-flex justify-content-center align-items-center my-4">
+                            <div class="col-auto flex-grow-1">
+                                <div class="line"></div>
+                            </div>
+                            <div class="col-auto">
+                                <p class="line-topic m-0 px-3">{{ topic.topic }}</p>
+                            </div>
+                            <div class="col-auto flex-grow-1">
+                                <div  class="line"></div>
+                            </div>
+                        </div>
 
+                    }
                 </div>
-                
-           
+
             </div>
-        </div>
+            
         
+        </div>
     </div>
+        
+</div>

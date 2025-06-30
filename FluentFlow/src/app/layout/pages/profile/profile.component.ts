@@ -4,6 +4,7 @@ import { Topic } from '../../../interfaces/Topics/topics';
 import { ProgressComponent } from '../progress/progress.component';
 import { NavbarComponent } from '../../additions/navbar/navbar.component';
 import { QuestionsService } from '../../../services/Questions/questions.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -22,7 +23,7 @@ export class ProfileComponent
   @ViewChildren('lineElement') lineElements!: QueryList<ElementRef>;
   @ViewChild('topicText') topicText!: ElementRef;
 
-  constructor(private __topicService: TopicsService, private _QuestionsService:QuestionsService) 
+  constructor(private __topicService: TopicsService, private _QuestionsService:QuestionsService, private _Router: Router) 
   {
     
   }
@@ -66,6 +67,11 @@ export class ProfileComponent
           this.titleNumber = i + 1;
         }
     }
+  }
+
+  goToLesson(topicIndex: number, chapterIndex: number) 
+  {
+    this._Router.navigate([`/lessons/${topicIndex}/${chapterIndex}`]);
   }
 
 }

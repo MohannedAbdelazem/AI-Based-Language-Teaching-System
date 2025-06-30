@@ -1,18 +1,24 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TopicsService {
 
+  TopicsData:BehaviorSubject<any> = new BehaviorSubject<any>(null);
+
   private jsonUrl = '../../../assets/topics.json';
   constructor(private _HttpClient: HttpClient) { }
 
   getTopics() :Observable<any> 
   {
-    return this._HttpClient.get(this.jsonUrl);
+    const data = this._HttpClient.get(this.jsonUrl);
+    data.subscribe((resolvedData) => {
+      this.TopicsData.next(resolvedData);
+    });
+    return data;
   }
 
 

@@ -7,9 +7,9 @@ import { TestQuestionComponent } from './layout/pages/test-question/test-questio
 import { FlagsComponent } from './layout/pages/flags/flags.component';
 import { ListeningQuestionsComponent } from './layout/pages/listening-questions/listening-questions.component';
 import { ReadingQuestionsComponent } from './layout/pages/reading-questions/reading-questions.component';
-import { Component } from '@angular/core';
 import { QuestionsListComponent } from './layout/pages/questions-list/questions-list.component';
 import { GrammerQuestionsComponent } from './layout/pages/grammer-questions/grammer-questions.component';
+import { LessonsComponent } from './layout/pages/lessons/lessons.component';
 
 export const routes: Routes = [
     { path: "", redirectTo: "login", pathMatch: "full" },
@@ -22,5 +22,6 @@ export const routes: Routes = [
     { path: "listening-questions/:id", component: ListeningQuestionsComponent },
     { path: "reading-questions/:id", component: ReadingQuestionsComponent }, 
     { path: "questions-list/:id", component: QuestionsListComponent},
-    { path: "grammar-questions/:id", component: GrammerQuestionsComponent }
+    { path: "grammar-questions/:id", component: GrammerQuestionsComponent },
+    { path: "lessons/:topicNum/:lessonNum", component: LessonsComponent } 
 ];
