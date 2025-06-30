@@ -15,30 +15,60 @@
                     <button>Details</button>
                 </div>
             </div>
-            <div class="main-topic">
-                <div class="row  d-flex justify-content-center container-fluid learning-lessons">
-                    @for (topic of Topics; let i = $index; track i) 
+            <div class="main-topic mb-5">
+                <div class="row   d-flex justify-content-center container-fluid learning-lessons">
+                    <div #lineElement class="row first-line  d-flex justify-content-center align-items-center my-4">
+                        <div class="col-auto flex-grow-1">
+                            <div class="line"></div>
+                        </div>
+                        <div class="col-auto">
+                            @if(Topics[0])
+                            {
+                                <p class="line-topic m-0 px-3">{{ Topics[0].topic }}</p>
+                            }
+                        </div>
+                        <div class="col-auto flex-grow-1">
+                            <div  class="line"></div>
+                        </div>
+                    </div>
+                    @if(Topics[0])
                     {
-                        @for (chapter of generateRange(topic.chaptersNum); let j = $index; track j) 
+                        @for (chapter of generateRange(Topics[0].chaptersNum); let j = $index; track j) 
                         {
-                            <div class="col-lg-4 lessons"  (click)="goToLesson(i, chapter - 1)">
+                            <div class="col-lg-4 lessons"  (click)="goToLesson(0, 0)">
                                 <div class="lesson">
                                     <p class="text-white fs-3 fw-bold ">{{chapter}}</p>
                                 </div>
                             </div>
                         }
-                        <div #lineElement class="row  d-flex justify-content-center align-items-center my-4">
-                            <div class="col-auto flex-grow-1">
-                                <div class="line"></div>
+                    }
+                    
+                    @for (topic of Topics; let i = $index; track i) 
+                    {
+                        @if(i > 0)
+                        {
+                            <div #lineElement class="row  d-flex justify-content-center align-items-center my-4">
+                                <div class="col-auto flex-grow-1">
+                                    <div class="line"></div>
+                                </div>
+                                <div class="col-auto">
+                                    <p class="line-topic m-0 px-3">{{ topic.topic }}</p>
+                                </div>
+                                <div class="col-auto flex-grow-1">
+                                    <div  class="line"></div>
+                                </div>
                             </div>
-                            <div class="col-auto">
-                                <p class="line-topic m-0 px-3">{{ topic.topic }}</p>
-                            </div>
-                            <div class="col-auto flex-grow-1">
-                                <div  class="line"></div>
-                            </div>
-                        </div>
-
+                            @for (chapter of generateRange(topic.chaptersNum); let j = $index; track j) 
+                            {
+                                <div class="col-lg-4 lessons"  (click)="goToLesson(i, chapter - 1)">
+                                    <div class="lesson">
+                                        <p class="text-white fs-3 fw-bold ">{{chapter}}</p>
+                                    </div>
+                                </div>
+                            }
+                            
+                        }
+                        
                     }
                 </div>
 

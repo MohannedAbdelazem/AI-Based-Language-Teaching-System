@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
 export class ProfileComponent 
 {
 
-  title: string = 'Past Simple';
+  title: string = '';
   titleNumber: number = 1;
 
   @ViewChildren('lineElement') lineElements!: QueryList<ElementRef>;
@@ -32,6 +32,7 @@ export class ProfileComponent
     this._QuestionsService.requieredQuestions.next(200);
     this.__topicService.getTopics().subscribe((data) => {
       this.Topics = data.topics;
+      this.title = this.Topics[0].topic;
     });
   }
 
