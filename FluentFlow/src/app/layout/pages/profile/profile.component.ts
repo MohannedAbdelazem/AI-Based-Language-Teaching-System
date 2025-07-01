@@ -1,12 +1,78 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { TopicsService } from '../../../services/Topics/topics.service';
+import { Topic } from '../../../interfaces/Topics/topics';
+import { ProgressComponent } from '../progress/progress.component';
+import { NavbarComponent } from '../../additions/navbar/navbar.component';
+import { QuestionsService } from '../../../services/Questions/questions.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [],
+  imports: [ProgressComponent,NavbarComponent],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss'
 })
-export class ProfileComponent {
+export class ProfileComponent 
+{
+
+  title: string = '';
+  titleNumber: number = 1;
+
+  @ViewChildren('lineElement') lineElements!: QueryList<ElementRef>;
+  @ViewChild('topicText') topicText!: ElementRef;
+
+  constructor(private __topicService: TopicsService, private _QuestionsService:QuestionsService, private _Router: Router) 
+  {
+    
+  }
+  Topics: Topic[] = [];
+  ngOnInit() {
+    this._QuestionsService.requieredQuestions.next(200);
+    this.__topicService.getTopics().subscribe((data) => {
+      this.Topics = data.topics;
+      this.title = this.Topics[0].topic;
+    });
+  }
+
+  generateRange(n: number): number[] 
+  {
+  return Array.from({ length: n }, (_, i) => i + 1);
+  }
+
+  @HostListener('window:scroll', [])onWindowScroll() 
+  {
+
+    this.checkCollision();
+  }
+
+  checkCollision() 
+  {
+    const lines = this.lineElements.toArray();
+    const topicRect = this.topicText.nativeElement.getBoundingClientRect();
+
+    for (let i = 0; i < lines.length; i++) 
+      {
+        const lineRect = lines[i].nativeElement.getBoundingClientRect();
+
+        const isTouching =
+          lineRect.bottom >= topicRect.top &&
+          lineRect.top <= topicRect.bottom &&
+          lineRect.right >= topicRect.left &&
+          lineRect.left <= topicRect.right;
+
+        if (isTouching) 
+        {
+          this.title = lines[i].nativeElement.innerText;
+          this.titleNumber = i + 1;
+        }
+    }
+  }
+
+  goToLesson(topicIndex: number, chapterIndex: number) 
+  {
+    this._Router.navigate([`/lessons/${topicIndex}/${chapterIndex}`]);
+  }
 
 }

@@ -9,7 +9,12 @@ export class AuthService {
 
   constructor(private _HttpClient:HttpClient) { }
 
-  sendRegister(userData:any):Observable<any> {
-    return this._HttpClient.post("http://localhost:3000/register", userData);
+  sendRegister(userData:any):Observable<any> 
+  {
+    return this._HttpClient.post("https://localhost:7051/api/Account/register", userData);
+  }
+  sendLogin(userData:any):Observable<any> 
+  {
+    return this._HttpClient.post("https://localhost:7051/api/Account/Login", userData);
   }
 }

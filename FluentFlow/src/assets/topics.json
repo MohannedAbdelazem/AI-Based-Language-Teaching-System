@@ -1,0 +1,129 @@
+{
+  "topics": [
+    {
+      "topic": "Present Simple",
+      "chaptersNum": 10,
+      "lessons": [
+        "Introduction to Present Simple",
+        "Forming Affirmative Sentences",
+        "Forming Negative Sentences",
+        "Yes/No Questions",
+        "Wh- Questions",
+        "Using 'to be'",
+        "Adverbs of Frequency",
+        "Daily Routines",
+        "Third Person Spelling Rules",
+        "Present Simple Review"
+      ]
+    },
+    {
+      "topic": "Past Simple",
+      "chaptersNum": 8,
+      "lessons": [
+        "Introduction to Past Simple",
+        "Regular Verbs",
+        "Irregular Verbs",
+        "Negative Sentences",
+        "Forming Questions",
+        "Time Expressions",
+        "Past Simple vs Present Simple",
+        "Practice Activities"
+      ]
+    },
+    {
+      "topic": "Present Continuous",
+      "chaptersNum": 7,
+      "lessons": [
+        "Introduction to Present Continuous",
+        "Affirmative Sentences",
+        "Negative Sentences",
+        "Yes/No Questions",
+        "Actions Happening Now",
+        "Temporary Actions",
+        "Practice Exercises"
+      ]
+    },
+    {
+      "topic": "Future Tense",
+      "chaptersNum": 6,
+      "lessons": [
+        "Introduction to Future Tense",
+        "Using 'will'",
+        "Using 'going to'",
+        "Making Predictions",
+        "Talking About Plans",
+        "Practice with Future Tense"
+      ]
+    },
+    {
+      "topic": "Countable and Uncountable Nouns",
+      "chaptersNum": 5,
+      "lessons": [
+        "Introduction to Nouns",
+        "Countable Nouns",
+        "Uncountable Nouns",
+        "Much vs Many",
+        "Practice Activities"
+      ]
+    },
+    {
+      "topic": "Modal Verbs",
+      "chaptersNum": 9,
+      "lessons": [
+        "What are Modal Verbs?",
+        "Can and Could",
+        "Must and Have to",
+        "Should and Ought to",
+        "May and Might",
+        "Shall and Will",
+        "Modal Verbs for Advice",
+        "Modal Verbs for Possibility",
+        "Modal Verbs Practice"
+      ]
+    },
+    {
+      "topic": "Prepositions of Time and Place",
+      "chaptersNum": 4,
+      "lessons": [
+        "Introduction to Prepositions",
+        "Prepositions of Time (in, on, at)",
+        "Prepositions of Place (in, on, at)",
+        "Prepositions Practice"
+      ]
+    },
+    {
+      "topic": "Adjectives and Adverbs",
+      "chaptersNum": 6,
+      "lessons": [
+        "What are Adjectives?",
+        "What are Adverbs?",
+        "Forming Adverbs from Adjectives",
+        "Comparing with Adjectives",
+        "Adjectives vs Adverbs",
+        "Practice Activities"
+      ]
+    },
+    {
+      "topic": "Articles (a, an, the)",
+      "chaptersNum": 3,
+      "lessons": [
+        "Introduction to Articles",
+        "Using 'a' and 'an'",
+        "Using 'the'"
+      ]
+    },
+    {
+      "topic": "Basic Sentence Structure",
+      "chaptersNum": 7,
+      "lessons": [
+        "What is a Sentence?",
+        "Subject and Predicate",
+        "Simple Sentences",
+        "Compound Sentences",
+        "Complex Sentences",
+        "Sentence Fragments",
+        "Sentence Structure Practice"
+      ]
+    }
+  ]
+}

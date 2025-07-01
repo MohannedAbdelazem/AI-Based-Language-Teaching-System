@@ -1,0 +1,35 @@
+<div class="Logo">
+    <img class="z-3" routerLink="/profile" src="./assets/Logo.png" alt="">
+    <div class="question-title text-white">
+        @if (questions[pragraphNumber]) 
+        {
+            <h1 class=" ms-4 ">Reading : {{questions[pragraphNumber].title}} </h1>
+        }
+    </div>
+</div>
+
+<div class="overflow-hidden">
+    <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ff50a5" fill-opacity="1"
+            d="M0,160L60,186.7C120,213,240,267,360,250.7C480,235,600,149,720,117.3C840,85,960,107,1080,149.3C1200,192,1320,256,1380,288L1440,320L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+        </path>
+    </svg>
+</div>
+
+<div class="container d-flex justify-content-around align-items-center text-white ">
+    @if(questions[pragraphNumber])
+    {
+        <p>{{questions[pragraphNumber].paragraph }}</p>
+    }
+ 
+</div>
+
+
+<div class="row d-flex justify-content-center align-items-center buttons">
+    <div class=" col-6 d-flex justify-content-start align-items-center">
+        <button class="button1" [routerLink]="['/questions-list',1]">Previous</button>
+    </div>
+    <div class="col-6 d-flex justify-content-end align-items-center">
+        <button class="button2" [routerLink]="['/test-question',pragraphNumber,reading]">Next</button>
+    </div>
+</div>

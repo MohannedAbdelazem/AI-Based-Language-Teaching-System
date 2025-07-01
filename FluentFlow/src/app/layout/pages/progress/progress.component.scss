@@ -1,0 +1,26 @@
+.progress {
+    height: 15px;
+    border-radius: 10px;
+    background-color: #3b364c;
+}
+
+.bars {
+    position: relative;
+    top: 150px;
+    left: 0px;
+    width: 500px;
+    border: #684d9e 5px solid;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    background-image: linear-gradient(to right, #b500ff, #ed00fe);
+    border-radius: 10px;
+}
+
+.progress-data {
+    position: sticky;
+    top: 225px; /* Sticks at the top when scrolling */
+    z-index: 1000;
+}

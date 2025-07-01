@@ -1,0 +1,40 @@
+
+.page {
+    position: relative;
+    top: 180px;
+}
+
+.user-progress
+{
+    position: relative;
+    right: 9px;
+    top: 7px;
+}
+
+.answer
+{
+  cursor: pointer;
+  position: relative;
+  top: 115px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  background-color: #f27ba5;
+  border-radius: 10px;
+  box-shadow: 0px 2px 15px rgba(255, 80, 165, 0.7);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.answer:hover
+{
+  transform: scale(1.02);
+  background-color: #b01965;
+  box-shadow: 0px 2px 20px rgba(255, 80, 165, 0.7);
+}
+
+.buttons
+{
+    position: relative;
+    bottom: 130px;
+}
