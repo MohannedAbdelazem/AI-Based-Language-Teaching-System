@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Graduation Project\\Graduation Project\\Youssef_Atya\\AI-Based-Language-Teaching-System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|d:\\graduation project\\graduation project\\youssef_atya\\ai-based-language-teaching-system\\ai-based-language-teaching\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEF44A97-9EEC-4516-BA23-0B2D2D32353D}|AI-based-Language-Teaching\\AI-based-Language-Teaching.csproj|solutionrelative:ai-based-language-teaching\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{26341fe2-71dd-46fd-bb1b-2e51a92a0d64}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Graduation Project\\Graduation Project\\Youssef_Atya\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Program.cs",
+              "RelativeDocumentMoniker": "AI-based-Language-Teaching\\Program.cs",
+              "ToolTip": "D:\\Graduation Project\\Graduation Project\\Youssef_Atya\\AI-Based-Language-Teaching-System\\AI-based-Language-Teaching\\Program.cs",
+              "RelativeToolTip": "AI-based-Language-Teaching\\Program.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T19:59:45.589Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

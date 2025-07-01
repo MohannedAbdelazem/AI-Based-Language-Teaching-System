@@ -1,0 +1,304 @@
+word,pos,cefr
+le,article,A1
+la,article,A1
+les,article,A1
+un,article,A1
+une,article,A1
+de,preposition,A1
+à,preposition,A1
+encore,adverb,A1
+beaucoup,adverb,A1
+peu,adverb,A1
+toujours,adverb,A1
+maintenant,adverb,A1
+hier,adverb,A1
+aujourd’hui,adverb,A1
+demain,adverb,A1
+ici,adverb,A1
+là,adverb,A1
+travailler,verb,A1
+habiter,verb,A1
+étudier,verb,A1
+commencer,verb,A1
+terminer,verb,A1
+ne...pas,negation,A1
+et,conjunction,A1
+mais,conjunction,A1
+ou,conjunction,A1
+ce,determiner,A1
+cet,determiner,A1
+cette,determiner,A1
+ces,determiner,A1
+mon,determiner,A1
+ma,determiner,A1
+mes,determiner,A1
+ton,determiner,A1
+ta,determiner,A1
+tes,determiner,A1
+être,verb,A1
+avoir,verb,A1
+très,adverb,A1
+aller,verb,A1
+sortir,verb,A1
+entrer,verb,A1
+faire,verb,A1
+parler,verb,A1
+aimer,verb,A1
+vouloir,verb,A2
+pouvoir,verb,A2
+devoir,verb,A2
+prendre,verb,A2
+mettre,verb,A2
+en,preposition/pronoun,A2
+y,pronoun,A2
+le,pronoun (direct object),A2
+la,pronoun (direct object),A2
+les,pronoun (direct object),A2
+lui,pronoun (indirect object),A2
+leur,pronoun (indirect object),A2
+en,pronoun (quantity),A2
+plus,adverb (comparative),A2
+moins,adverb (comparative),A2
+aussi,adverb (comparative),A2
+souvent,adverb,A2
+jamais,adverb,A2
+ne...jamais,negation,A2
+ne...plus,negation,A2
+finir,verb,A2
+choisir,verb,A2
+répondre,verb,A2
+attendre,verb,A2
+venir,verb,A2
+revenir,verb,A2
+monter,verb,A2
+descendre,verb,A2
+penser,verb,A2
+savoir,verb,A2
+connaître,verb,A2
+voir,verb,A2
+demander,verb,A2
+répéter,verb,A2
+se lever,verb,A2
+se coucher,verb,A2
+qui,pronoun (relative),B1
+que,pronoun (relative),B1
+dont,pronoun (relative),B1
+où,pronoun (relative/adverb),B1
+qui,conjunction (subordinator),B1
+que,conjunction (subordinator),B1
+parce que,conjunction (subordinator),B1
+bien que,conjunction (subordinator),B1
+ne...que,negation/B1 qualifier,B1
+lequel,pronoun (relative),B1
+auquel,pronoun (relative),B1
+duquel,pronoun (relative),B1
+naître,verb,B1
+mourir,verb,B1
+vivre,verb,B1
+croire,verb,B1
+entendre,verb,B1
+sentir,verb,B1
+réfléchir,verb,B1
+se souvenir,verb,B1
+s’asseoir,verb,B1
+se promener,verb,B1
+apprendre,verb,B1
+expliquer,verb,B1
+essayer,verb,B1
+oublier,verb,B1
+se rappeler,verb,B1
+s’excuser,verb,B1
+s’inquiéter,verb,B1
+se dépêcher,verb,B1
+s’amuser,verb,B1
+s’ennuyer,verb,B1
+se tromper,verb,B1
+se fâcher,verb,B1
+éteindre,verb,B1
+allumer,verb,B1
+rêver,verb,B1
+craindre,verb,B1
+se plaindre,verb,B1
+rire,verb,B1
+sourire,verb,B1
+mentir,verb,B1
+construire,verb,B1
+traduire,verb,B1
+détruire,verb,B1
+suivre,verb,B1
+permettre,verb,B1
+interdire,verb,B1
+exiger,verb,B1
+prévoir,verb,B1
+rejoindre,verb,B1
+atteindre,verb,B1
+accueillir,verb,B1
+reconnaître,verb,B1
+apparaître,verb,B1
+disparaître,verb,B1
+écrire,verb,B1
+lire,verb,B1
+remercier,verb,B1
+exprimer,verb,B1
+ressentir,verb,B1
+paraître,verb,B1
+pourtant,adverb,B1
+cependant,adverb,B1
+d’ailleurs,adverb,B1
+en effet,adverb,B1
+tandis que,conjunction,B1
+lorsque,conjunction,B1
+alors que,conjunction,B1
+afin que,conjunction,B1
+quoique,conjunction,B1
+bien que,conjunction,B1
+affirmer,verb,B2
+admettre,verb,B2
+nier,verb,B2
+prétendre,verb,B2
+provoquer,verb,B2
+aboutir,verb,B2
+agir,verb,B2
+contester,verb,B2
+revendiquer,verb,B2
+appuyer,verb,B2
+soutenir,verb,B2
+nuancer,verb,B2
+justifier,verb,B2
+prouver,verb,B2
+anticiper,verb,B2
+considérer,verb,B2
+remettre en question,verb,B2
+aborder,verb,B2
+débattre,verb,B2
+argumenter,verb,B2
+signaler,verb,B2
+insister,verb,B2
+distinguer,verb,B2
+gérer,verb,B2
+diriger,verb,B2
+résoudre,verb,B2
+surmonter,verb,B2
+atteindre,verb,B2
+impliquer,verb,B2
+entamer,verb,B2
+stimuler,verb,B2
+élargir,verb,B2
+réduire,verb,B2
+intervenir,verb,B2
+suggérer,verb,B2
+s’opposer,verb,B2
+prévenir,verb,B2
+récupérer,verb,B2
+évoquer,verb,B2
+se produire,verb,B2
+désormais,adverb,B2
+dorénavant,adverb,B2
+quand même,adverb,B2
+en revanche,adverb,B2
+par conséquent,adverb,B2
+malgré,preposition,B2
+quant à,preposition,B2
+en ce qui concerne,phrase,B2
+au fur et à mesure que,conjunction,B2
+à condition que,conjunction,B2
+aborder,verb,C1
+alléguer,verb,C1
+appréhender,verb,C1
+argumenter,verb,C1
+bénéficier,verb,C1
+clarifier,verb,C1
+comporter,verb,C1
+déduire,verb,C1
+démontrer,verb,C1
+discerner,verb,C1
+élaborer,verb,C1
+engendrer,verb,C1
+énoncer,verb,C1
+étayer,verb,C1
+évoquer,verb,C1
+illustrer,verb,C1
+impacter,verb,C1
+impliquer,verb,C1
+inciter,verb,C1
+interpréter,verb,C1
+justifier,verb,C1
+manifester,verb,C1
+mettre en valeur,verb,C1
+nuancer,verb,C1
+préconiser,verb,C1
+remettre en cause,verb,C1
+résulter,verb,C1
+revendiquer,verb,C1
+souligner,verb,C1
+stimuler,verb,C1
+susciter,verb,C1
+transmettre,verb,C1
+viser,verb,C1
+adéquatement,adverb,C1
+assurément,adverb,C1
+autrement dit,adverbial phrase,C1
+en somme,adverbial phrase,C1
+néanmoins,adverb,C1
+notamment,adverb,C1
+quoique,conjunction,C1
+bien que,conjunction,C1
+pourvu que,conjunction,C1
+afin que,conjunction,C1
+de sorte que,conjunction,C1
+dans la mesure où,conjunction,C1
+en dépit de,preposition,C1
+quant à,preposition,C1
+au cas où,conjunction,C1
+de peur que,conjunction,C1
+au détriment de,preposition,C1
+abstraire,verb,C2
+analyser,verb,C2
+anticiper,verb,C2
+assimiler,verb,C2
+attribuer,verb,C2
+contrecarrer,verb,C2
+déconstruire,verb,C2
+défendre (une thèse),verb,C2
+délibérer,verb,C2
+déplorer,verb,C2
+détecter,verb,C2
+envisager,verb,C2
+épouser (une idée),verb,C2
+extrapoler,verb,C2
+hiérarchiser,verb,C2
+inférer,verb,C2
+invoquer,verb,C2
+objecter,verb,C2
+paraphraser,verb,C2
+plaider,verb,C2
+postuler,verb,C2
+prôner,verb,C2
+raisonner,verb,C2
+reformuler,verb,C2
+réfuter,verb,C2
+relativiser,verb,C2
+résilier,verb,C2
+s’approprier,verb,C2
+s’ériger en,verb,C2
+transgresser,verb,C2
+ultimement,adverb,C2
+précisément,adverb,C2
+notamment,adverb,C2
+subséquemment,adverb,C2
+tacitement,adverb,C2
+nonobstant,preposition,C2
+en vertu de,prepositional phrase,C2
+au préalable,adverb,C2
+le cas échéant,adverbial phrase,C2
+sous-entendu,adjective/adverb,C2
+voire,adverb,C2
+fût-ce,verb form (literary conditional),C2
+eût-il,verb form (inversion + past subjunctive),C2
+soit que... soit que,conjunction,C2
+ainsi soit-il,phrase,C2
+de facto,adverb (Latinism),C2
+ipso facto,adverb (Latinism),C2
+à fortiori,adverb (Latinism),C2
+en l’occurrence,adverb,C2
+par excellence,adverb,C2

@@ -6,7 +6,6 @@ namespace AI_based_Language_Teaching.Service
     public class QuestionService : IQuestionService
     {
         private readonly ApplicationDbContext _context;
-
         public QuestionService(ApplicationDbContext context)
         {
             _context = context;
@@ -17,7 +16,7 @@ namespace AI_based_Language_Teaching.Service
             return _context.Questions.ToList();
         }
 
-        public Question GetQuestionById(int id)
+        public Question GetQuestionById(long id)
         {
             return _context.Questions.Find(id);
         }
@@ -34,7 +33,7 @@ namespace AI_based_Language_Teaching.Service
             _context.SaveChanges(); 
         }
 
-        public void DeleteQuestion(int id)
+        public void DeleteQuestion(long id)
         {
             var question = _context.Questions.Find(id);
             if (question != null)

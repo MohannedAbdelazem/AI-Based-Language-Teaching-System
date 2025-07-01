@@ -11,10 +11,10 @@ export class AuthService {
 
   sendRegister(userData:any):Observable<any> 
   {
-    return this._HttpClient.post("https://localhost:7051/api/Account/register", userData);
+    return this._HttpClient.post("https://localhost:7051/api/User/register", userData);
   }
   sendLogin(userData:any):Observable<any> 
   {
-    return this._HttpClient.post("https://localhost:7051/api/Account/Login", userData);
+    return this._HttpClient.post("https://localhost:7051/api/User/login", userData);
   }
 }
